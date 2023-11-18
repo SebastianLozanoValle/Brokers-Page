@@ -1,0 +1,8 @@
+a{
+  text-decoration: none !important;
+}
+
+.active-link {
+  color: #FF0000 !important; /* Cambia esto al color que desees para el enlace activo */
+  /* Otros estilos que desees aplicar al enlace activo */
+}
