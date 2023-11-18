@@ -1,6 +1,7 @@
 import { ImRadioUnchecked } from "react-icons/im";
 import { Box, Card, CardBody, Container, Flex, Heading, Text } from "@chakra-ui/react"
 import banner1 from '../assets/img/banner_servicios.png'
+import { Tarjeta } from "../components/Tarjeta";
 
 export const Servicios = () => {
     return (
@@ -45,141 +46,27 @@ export const Servicios = () => {
                     >
                         <Flex flexWrap="wrap">
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <Card
-                                    boxShadow='md'
-                                >
-                                    <CardBody>
-                                        <Flex flexWrap='wrap' align='center' height={150}>
-                                            <Text
-                                                fontWeight='bold'
-                                                fontSize='5xl'
-                                                flex={0.3}
-                                                p={2}
-                                            >
-                                                01
-                                            </Text>
-                                            <Text
-                                                fontWeight='bold'
-                                                fontSize='3xl'
-                                                flex={1.7}
-                                                p={2}
-                                            >
-                                                Transporte internacional marítimo.
-                                            </Text>
-                                        </Flex>
-                                    </CardBody>
-                                </Card>
+                                <Tarjeta boxShadow={'lg'} child1={'01'} child2={'Transporte internacional marítimo.'} fontSizeChild1='5xl' height={150} fontWeightChild2='bold' />
                             </Box>
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <Card
-                                    boxShadow='md'
-                                >
-                                    <CardBody>
-                                        <Flex flexWrap='wrap' align='center' height={150}>
-                                            <Text
-                                                fontWeight='bold'
-                                                fontSize='5xl'
-                                                flex={0.3}
-                                                p={2}
-                                            >
-                                                02
-                                            </Text>
-                                            <Text
-                                                fontWeight='bold'
-                                                fontSize='3xl'
-                                                flex={1.7}
-                                                p={2}
-                                            >
-                                                Transporte internacional aéreo.
-                                            </Text>
-                                        </Flex>
-                                    </CardBody>
-                                </Card>
+                                <Tarjeta boxShadow={'lg'} child1={'02'} child2={'Transporte internacional aéreo.'} fontSizeChild1='5xl' height={150} fontWeightChild2='bold' />
                             </Box>
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <Card
-                                    boxShadow='md'
-                                >
-                                    <CardBody>
-                                        <Flex flexWrap='wrap' align='center' height={150}>
-                                            <Text
-                                                fontWeight='bold'
-                                                fontSize='5xl'
-                                                flex={0.3}
-                                                p={2}
-                                            >
-                                                03
-                                            </Text>
-                                            <Text
-                                                fontWeight='bold'
-                                                fontSize='3xl'
-                                                flex={1.7}
-                                                p={2}
-                                            >
-                                                Transporte terrestre nacional e internacional.
-                                            </Text>
-                                        </Flex>
-                                    </CardBody>
-                                </Card>
+                                <Tarjeta boxShadow={'lg'} child1={'03'} child2={'Transporte terrestre nacional e internacional.'} fontSizeChild1='5xl' height={150} fontWeightChild2='bold' />
                             </Box>
                         </Flex>
                         <Flex flexWrap="wrap">
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <Card
-                                    boxShadow='md'
-                                >
-                                    <CardBody>
-                                        <Flex flexWrap='wrap' align='center' height={150}>
-                                            <Text
-                                                fontWeight='bold'
-                                                fontSize='5xl'
-                                                flex={0.3}
-                                                p={2}
-                                            >
-                                                04
-                                            </Text>
-                                            <Text
-                                                fontWeight='bold'
-                                                fontSize='3xl'
-                                                flex={1.7}
-                                                p={2}
-                                            >
-                                                Seguros internacionales de mercancías.
-                                            </Text>
-                                        </Flex>
-                                    </CardBody>
-                                </Card>
+                                <Tarjeta boxShadow={'lg'} child1={'04'} child2={'Seguros internacionales de mercancías.'} fontSizeChild1='5xl' height={150} fontWeightChild2='bold' />
                             </Box>
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" pr={{ base: "4", md: "4", lg: "12" }} maxWidth="100%">
-                                <Card
-                                    boxShadow='md'
-                                >
-                                    <CardBody>
-                                        <Flex flexWrap='wrap' align='center' height={150}>
-                                            <Text
-                                                fontWeight='bold'
-                                                fontSize='5xl'
-                                                flex={0.3}
-                                                p={2}
-                                            >
-                                                05
-                                            </Text>
-                                            <Text
-                                                fontWeight='bold'
-                                                fontSize='3xl'
-                                                flex={1.7}
-                                                p={2}
-                                            >
-                                                Agenciamiento aduanero.
-                                            </Text>
-                                        </Flex>
-                                    </CardBody>
-                                </Card>
+                                <Tarjeta boxShadow={'lg'} child1={'05'} child2={'Agenciamiento aduanero.'} fontSizeChild1='5xl' height={150} fontWeightChild2='bold' />
                             </Box>
                         </Flex>
                     </Container>
                 </Container>
             </Box>
+            {/* comienzo saegunda subseccion */}
             <Box>
                 <Container
                     maxW="90%"
@@ -196,96 +83,30 @@ export const Servicios = () => {
                             >Transporte internacional marítimo</Heading>
                         </Box>
                         <Box flex={3} p={4}>
-                            <Card
-                                boxShadow='lg'
-                                margin={4}
-                            >
-                                <CardBody>
-                                    <Flex flexWrap='wrap' align='center'>
-                                        <Text
-                                            fontWeight='bold'
-                                            fontSize='100px'
-                                            flex={0.3}
-                                            p={2}
-                                            color='brand.primary'
-                                        >
-                                            <ImRadioUnchecked />
-                                        </Text>
-                                        <Text
-                                            fontSize='3xl'
-                                            flex={1.7}
-                                            p={2}
-                                        >
-                                            <Heading
-                                                fontSize='5xl'
-                                            >
-                                                Coordinación de Operaciones
-                                            </Heading>
-                                            Carga en importación y exportación vía marítima en las modalidades:<br/><b>FCL - Full Container Load /OPEN TOP, FLAT, FLAT RACK, ISO TANQUE, REFFER.</b>
-                                        </Text>
-                                    </Flex>
-                                </CardBody>
-                            </Card>
-                            <Card
-                                boxShadow='lg'
-                                margin={4}
-                            >
-                                <CardBody>
-                                    <Flex flexWrap='wrap' align='center'>
-                                        <Text
-                                            fontWeight='bold'
-                                            fontSize='100px'
-                                            flex={0.3}
-                                            p={2}
-                                            color='brand.primary'
-                                        >
-                                            <ImRadioUnchecked />
-                                        </Text>
-                                        <Text
-                                            fontSize='3xl'
-                                            flex={1.7}
-                                            p={2}
-                                        >
-                                            <Heading
-                                                fontSize='5xl'
-                                            >
-                                                Tipos de carga
-                                            </Heading>
-                                            Menajes, cargas de proyecto, cargas a granel, cargas liquidas, gaseosas, carga química o DG y carga viva.
-                                        </Text>
-                                    </Flex>
-                                </CardBody>
-                            </Card>
-                            <Card
-                                boxShadow='lg'
-                                margin={4}
-                            >
-                                <CardBody>
-                                    <Flex flexWrap='wrap' align='center'>
-                                        <Text
-                                            fontWeight='bold'
-                                            fontSize='100px'
-                                            flex={0.3}
-                                            p={2}
-                                            color='brand.primary'
-                                        >
-                                            <ImRadioUnchecked />
-                                        </Text>
-                                        <Text
-                                            fontSize='3xl'
-                                            flex={1.7}
-                                            p={2}
-                                        >
-                                            <Heading
-                                                fontSize='5xl'
-                                            >
-                                                Carga suelta
-                                            </Heading>
-                                            Less Container Load /Break Bulk. Multimodal (<b>OTM, DTA, OTMI, DTAI</b>), en contenedor o carga suelta.
-                                        </Text>
-                                    </Flex>
-                                </CardBody>
-                            </Card>
+                            <Tarjeta margin={4} boxShadow={'lg'} child1={<ImRadioUnchecked />} child2={<>
+                                <Heading
+                                    fontSize='5xl'
+                                >
+                                    Coordinación de Operaciones
+                                </Heading>
+                                <Text>Carga en importación y exportación vía marítima en las modalidades:<br/><b>FCL - Full Container Load /OPEN TOP, FLAT, FLAT RACK, ISO TANQUE, REFFER.</b></Text>
+                            </>} fontSizeChild1='100px' colorChild1='brand.primary' />
+                            <Tarjeta margin={4} boxShadow={'lg'} child1={<ImRadioUnchecked />} child2={<>
+                                <Heading
+                                    fontSize='5xl'
+                                >
+                                    Tipos de carga
+                                </Heading>
+                                <Text>Menajes, cargas de proyecto, cargas a granel, cargas liquidas, gaseosas, carga química o DG y carga viva.</Text>
+                            </>} fontSizeChild1='100px' colorChild1='brand.primary' />
+                            <Tarjeta margin={4} boxShadow={'lg'} child1={<ImRadioUnchecked />} child2={<>
+                                <Heading
+                                    fontSize='5xl'
+                                >
+                                    Carga suelta
+                                </Heading>
+                                <Text>Less Container Load /Break Bulk. Multimodal (<b>OTM, DTA, OTMI, DTAI</b>), en contenedor o carga suelta.</Text>
+                            </>} fontSizeChild1='100px' colorChild1='brand.primary' />
                         </Box>
                     </Flex>
                 </Container>
