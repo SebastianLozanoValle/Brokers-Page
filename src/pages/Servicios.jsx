@@ -1,74 +1,175 @@
-import { ContenedorTarjetas } from "../components/ContenedorTarjetas";
-import { ExpandableCard } from "../components/ExpandableCard";
-import { Navegacion } from "../components/Navegacion";
-import { PiedDePagina } from "../components/PieDePagina";
+import { Box, Card, CardBody, Center, Container, Flex, Heading, Text } from "@chakra-ui/react"
+import banner1 from '../assets/img/banner_servicios.png'
 
 export const Servicios = () => {
-    const tarjetasConExpandibleCard = [
-        {
-            component: ExpandableCard,
-            props: {
-                title: 'TRANSPORTE INTERNACIONAL MARITIMO',
-                listItems: [
-                    'Coordinación de Operaciones de transporte internacional de carga en importación y exportación vía aérea.',
-                    'FCL - Full Container Load /OPEN TOP, FLAT, FLAT RACK, ISO TANQUE,REFFER',
-                    'Menajes, Cargas de proyecto, Cargas a granel, cargas liquidas, gaseosas, carga química o DG, carga viva',
-                    'Carga suelta: Less Container Load /Break Bulk.',
-                    'Multimodal (OTM, DTA, OTMI, DTAI), en contenedor o carga Suelta.',
-                ],
-            },
-        },
-        {
-            component: ExpandableCard,
-            props: {
-                title: 'TRANSPORTE INTERNACIONAL AÉREO',
-                listItems: [
-                    'Coordinación de operaciones de transporte internacional de carga en importación y exportación vía aérea.',
-                    'Manejo de carga general.',
-                    'Manejo de carga perecedera.',
-                    'Manejo carga Viva',
-                    'Manejo de carga peligrosas',
-                ],
-            },
-        },
-        {
-            component: ExpandableCard,
-            props: {
-                title: 'AGENCIAMIENTO ADUANERO',
-                listItems: [
-                    'Coordinación de trámites aduaneros.',
-                    'Trámites ante las entidades legales pertinentes a la operación.DIAN,VUCE,INVIMA y ICA.',
-                    'Asesoría en normatividad aduanera de exportaciones e importaciones;acuerdos comerciales de integración.',
-                    'Coordinación operativa y presencia en los principales puertos colombianos como Santa Marta, Barranquilla, Cartagena, Buenaventura, Ipiales',
-                ],
-            },
-        },
-        {
-            component: ExpandableCard,
-            props: {
-                title: 'SEGUROS INTERNACIONALES DE MERCANCIAS',
-                listItems: [
-                    'Contratación de pólizas de carga internacional.',
-                    'Contratación de seguros generales de daños, hurto y pérdidas de mercancías por cuenta de terceros',
-                ],
-            },
-        },
-        // Agrega más tarjetas con el componente ExpandibleCard y propiedades específicas
-    ];
-
     return (
-        <>
-            <div className="servicios">
-                <Navegacion />
-                <div className="my">
-                <hr className='featurette-divider'/>
-                    <div className="container text-principal">
-                        <h2>Nuetros servicios</h2>
-                    </div>
-                    <ContenedorTarjetas className="" tarjetas={tarjetasConExpandibleCard} />
-                </div>
-                <PiedDePagina />
-            </div>
-        </>
-    );
+        <div>
+            <Box
+                bg={`url(${banner1})`}
+                // height='100vh'
+                backgroundSize='cover'
+                backgroundPosition='top'
+                backgroundRepeat='no-repeat'
+                // width='100vw'
+                filter="grayscale(75%)"
+            >
+                <Container
+                    maxW="90%"
+                    py={20}
+                >
+                    <Heading
+                        fontSize='5xl'
+                        color='#fff'
+                        borderBottom='solid'
+                        display='inline-block'
+                        // width={500}
+                        textAlign='left'
+                        mb={10}
+                    >
+                        Nuestros servicios
+                    </Heading>
+                    <Text
+                        color='#fff'
+                        fontSize='4xl'
+                    >
+                        En MC Shipbrokers contamos con múltiples soluciones logísticas para tu negocio. Junto a nuestra especialidad en procesos eficientes de transporte nacional e internacional.
+                        <br />
+                        <br />
+                        Estamos certificados por la alianza internacional de carga Northstar y la DF Aliance en el servicio de carga marítima y aérea, dentro de nuestro portafolio de servicios se encuentran los siguientes servicios:
+                    </Text>
+                    <Container
+                        maxW="100%"
+                        pt={10}
+                        px={20}
+                    >
+                        <Flex flexWrap="wrap">
+                            <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
+                                <Card>
+                                    <CardBody>
+                                        <Flex flexWrap='wrap' align='center' height={150}>
+                                            <Text
+                                                fontWeight='bold'
+                                                fontSize='5xl'
+                                                flex={0.3}
+                                                p={2}
+                                            >
+                                                01
+                                            </Text>
+                                            <Text
+                                                fontWeight='bold'
+                                                fontSize='3xl'
+                                                flex={1.7}
+                                                p={2}
+                                            >
+                                                Transporte internacional marítimo.
+                                            </Text>
+                                        </Flex>
+                                    </CardBody>
+                                </Card>
+                            </Box>
+                            <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
+                                <Card>
+                                    <CardBody>
+                                        <Flex flexWrap='wrap' align='center' height={150}>
+                                            <Text
+                                                fontWeight='bold'
+                                                fontSize='5xl'
+                                                flex={0.3}
+                                                p={2}
+                                            >
+                                                02
+                                            </Text>
+                                            <Text
+                                                fontWeight='bold'
+                                                fontSize='3xl'
+                                                flex={1.7}
+                                                p={2}
+                                            >
+                                                Transporte internacional aéreo.
+                                            </Text>
+                                        </Flex>
+                                    </CardBody>
+                                </Card>
+                            </Box>
+                            <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
+                                <Card>
+                                    <CardBody>
+                                        <Flex flexWrap='wrap' align='center' height={150}>
+                                            <Text
+                                                fontWeight='bold'
+                                                fontSize='5xl'
+                                                flex={0.3}
+                                                p={2}
+                                            >
+                                                03
+                                            </Text>
+                                            <Text
+                                                fontWeight='bold'
+                                                fontSize='3xl'
+                                                flex={1.7}
+                                                p={2}
+                                            >
+                                                Transporte terrestre nacional e internacional.
+                                            </Text>
+                                        </Flex>
+                                    </CardBody>
+                                </Card>
+                            </Box>
+                        </Flex>
+                        <Flex flexWrap="wrap">
+                            <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
+                                <Card>
+                                    <CardBody>
+                                        <Flex flexWrap='wrap' align='center' height={150}>
+                                            <Text
+                                                fontWeight='bold'
+                                                fontSize='5xl'
+                                                flex={0.3}
+                                                p={2}
+                                            >
+                                                04
+                                            </Text>
+                                            <Text
+                                                fontWeight='bold'
+                                                fontSize='3xl'
+                                                flex={1.7}
+                                                p={2}
+                                            >
+                                                Seguros internacionales de mercancías.
+                                            </Text>
+                                        </Flex>
+                                    </CardBody>
+                                </Card>
+                            </Box>
+                            <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" pr={{ base: "4", md: "4", lg: "12" }} maxWidth="100%">
+                                <Card>
+                                    <CardBody>
+                                        <Flex flexWrap='wrap' align='center' height={150}>
+                                            <Text
+                                                fontWeight='bold'
+                                                fontSize='5xl'
+                                                flex={0.3}
+                                                p={2}
+                                            >
+                                                05
+                                            </Text>
+                                            <Text
+                                                fontWeight='bold'
+                                                fontSize='3xl'
+                                                flex={1.7}
+                                                p={2}
+                                            >
+                                                Agenciamiento aduanero.
+                                            </Text>
+                                        </Flex>
+                                    </CardBody>
+                                </Card>
+                            </Box>
+                            {/* <Box flex='1' p='4'></Box> */}
+                        </Flex>
+                    </Container>
+                </Container>
+            </Box>
+        </div>
+    )
 }

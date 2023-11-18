@@ -1,8 +1,7 @@
 import { Box, Flex, VStack, Image, Button, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Link as ChakraLink } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
-import logo from "../assets/img/logo_nav.png"; // Reemplaza con la ruta correcta de tu logo
-import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/img/logo_nav.png";
 import CustomNavLink from "./CustomNavLink";
 
 export const NavBar = () => {
@@ -25,17 +24,24 @@ export const NavBar = () => {
     }, []);
 
     return (
-        <Box>
+        <Box
+            position="fixed"
+            top="0"
+            left="0"
+            right="0"
+            zIndex="999"
+            bg="brand.background"
+            color="brand.secondary"
+            boxShadow="0px 4px 4px rgba(0, 0, 0, 0.1)" // Puedes ajustar la sombra según tus preferencias
+        >
             {/* Barra de navegación */}
             <Flex
                 p={4}
-                bg="brand.background"
-                color="brand.secondary"
                 align="center"
                 fontSize={20}
                 fontWeight="bold"
             >
-                <Image src={logo} alt="Logo" boxSize="50px" ml='4vw' width={200} />
+                <Image src={logo} alt="Logo" boxSize="50px" ml='2vw' width={200} />
 
                 {isMobile ? (
                     // Menú hamburguesa para móviles
