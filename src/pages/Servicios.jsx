@@ -1,9 +1,10 @@
-import { Box, Card, CardBody, Center, Container, Flex, Heading, Text } from "@chakra-ui/react"
+import { ImRadioUnchecked } from "react-icons/im";
+import { Box, Card, CardBody, Container, Flex, Heading, Text } from "@chakra-ui/react"
 import banner1 from '../assets/img/banner_servicios.png'
 
 export const Servicios = () => {
     return (
-        <div>
+        <>
             <Box
                 bg={`url(${banner1})`}
                 // height='100vh'
@@ -44,7 +45,9 @@ export const Servicios = () => {
                     >
                         <Flex flexWrap="wrap">
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <Card>
+                                <Card
+                                    boxShadow='md'
+                                >
                                     <CardBody>
                                         <Flex flexWrap='wrap' align='center' height={150}>
                                             <Text
@@ -68,7 +71,9 @@ export const Servicios = () => {
                                 </Card>
                             </Box>
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <Card>
+                                <Card
+                                    boxShadow='md'
+                                >
                                     <CardBody>
                                         <Flex flexWrap='wrap' align='center' height={150}>
                                             <Text
@@ -92,7 +97,9 @@ export const Servicios = () => {
                                 </Card>
                             </Box>
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <Card>
+                                <Card
+                                    boxShadow='md'
+                                >
                                     <CardBody>
                                         <Flex flexWrap='wrap' align='center' height={150}>
                                             <Text
@@ -118,7 +125,9 @@ export const Servicios = () => {
                         </Flex>
                         <Flex flexWrap="wrap">
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <Card>
+                                <Card
+                                    boxShadow='md'
+                                >
                                     <CardBody>
                                         <Flex flexWrap='wrap' align='center' height={150}>
                                             <Text
@@ -142,7 +151,9 @@ export const Servicios = () => {
                                 </Card>
                             </Box>
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" pr={{ base: "4", md: "4", lg: "12" }} maxWidth="100%">
-                                <Card>
+                                <Card
+                                    boxShadow='md'
+                                >
                                     <CardBody>
                                         <Flex flexWrap='wrap' align='center' height={150}>
                                             <Text
@@ -165,11 +176,120 @@ export const Servicios = () => {
                                     </CardBody>
                                 </Card>
                             </Box>
-                            {/* <Box flex='1' p='4'></Box> */}
                         </Flex>
                     </Container>
                 </Container>
             </Box>
-        </div>
+            <Box>
+                <Container
+                    maxW="90%"
+                    py={20}
+                >
+                    <Flex
+                        flexWrap='wrap'
+                    >
+                        <Box flex={2} p={4}>
+                            <Heading
+                                fontSize='5xl'
+                                borderBottom='solid'
+                                color='brand.primary'
+                            >Transporte internacional marítimo</Heading>
+                        </Box>
+                        <Box flex={3} p={4}>
+                            <Card
+                                boxShadow='lg'
+                                margin={4}
+                            >
+                                <CardBody>
+                                    <Flex flexWrap='wrap' align='center'>
+                                        <Text
+                                            fontWeight='bold'
+                                            fontSize='100px'
+                                            flex={0.3}
+                                            p={2}
+                                            color='brand.primary'
+                                        >
+                                            <ImRadioUnchecked />
+                                        </Text>
+                                        <Text
+                                            fontSize='3xl'
+                                            flex={1.7}
+                                            p={2}
+                                        >
+                                            <Heading
+                                                fontSize='5xl'
+                                            >
+                                                Coordinación de Operaciones
+                                            </Heading>
+                                            Carga en importación y exportación vía marítima en las modalidades:<br/><b>FCL - Full Container Load /OPEN TOP, FLAT, FLAT RACK, ISO TANQUE, REFFER.</b>
+                                        </Text>
+                                    </Flex>
+                                </CardBody>
+                            </Card>
+                            <Card
+                                boxShadow='lg'
+                                margin={4}
+                            >
+                                <CardBody>
+                                    <Flex flexWrap='wrap' align='center'>
+                                        <Text
+                                            fontWeight='bold'
+                                            fontSize='100px'
+                                            flex={0.3}
+                                            p={2}
+                                            color='brand.primary'
+                                        >
+                                            <ImRadioUnchecked />
+                                        </Text>
+                                        <Text
+                                            fontSize='3xl'
+                                            flex={1.7}
+                                            p={2}
+                                        >
+                                            <Heading
+                                                fontSize='5xl'
+                                            >
+                                                Tipos de carga
+                                            </Heading>
+                                            Menajes, cargas de proyecto, cargas a granel, cargas liquidas, gaseosas, carga química o DG y carga viva.
+                                        </Text>
+                                    </Flex>
+                                </CardBody>
+                            </Card>
+                            <Card
+                                boxShadow='lg'
+                                margin={4}
+                            >
+                                <CardBody>
+                                    <Flex flexWrap='wrap' align='center'>
+                                        <Text
+                                            fontWeight='bold'
+                                            fontSize='100px'
+                                            flex={0.3}
+                                            p={2}
+                                            color='brand.primary'
+                                        >
+                                            <ImRadioUnchecked />
+                                        </Text>
+                                        <Text
+                                            fontSize='3xl'
+                                            flex={1.7}
+                                            p={2}
+                                        >
+                                            <Heading
+                                                fontSize='5xl'
+                                            >
+                                                Carga suelta
+                                            </Heading>
+                                            Less Container Load /Break Bulk. Multimodal (<b>OTM, DTA, OTMI, DTAI</b>), en contenedor o carga suelta.
+                                        </Text>
+                                    </Flex>
+                                </CardBody>
+                            </Card>
+                        </Box>
+                    </Flex>
+                </Container>
+            </Box>
+        </>
     )
 }
