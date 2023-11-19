@@ -58,7 +58,7 @@ export const NavBar = () => {
                         <CustomNavLink to='/nosotros' children='Nosotros' />
                         <CustomNavLink to='/servicios' children='Servicios' />
                         <CustomNavLink to='/boletin' children='Boletín' />
-                        <CustomNavLink to='/contacto' children='Boletín' />
+                        <CustomNavLink to='/contacto' children='Contacto' />
                     </Flex>
                 )}
 
