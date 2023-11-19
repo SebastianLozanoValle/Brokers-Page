@@ -7,15 +7,16 @@ export const Tarjeta = ({ margin = 0, boxShadow, child1, fontSizeChild1 = '5xl',
             height={altura}
         >
             <Card
+                transition='.5s'
                 margin={margin}
                 boxShadow={boxShadow}
                 width='100%'
                 height={altura}
                 borderRadius={20}
                 _hover={{
-                    transition: '.5s',
                     color: '#fff',
-                    bg: colorHover
+                    bg: colorHover,
+                    transform: altura === 'auto'? 'scale(1.1)' : 'scale(1)',
                 }}
             >
                 <CardBody>

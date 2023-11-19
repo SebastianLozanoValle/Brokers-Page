@@ -1,13 +1,24 @@
-import { ImRadioUnchecked } from "react-icons/im";
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, Card, CardBody, Center, Container, Flex, Heading, Text, UnorderedList } from "@chakra-ui/react"
 import banner1 from '../assets/img/banner_servicios.png'
 import maritimo from '../assets/img/seccionmaritimo.png'
 import aereo from '../assets/img/seccionaereo.png'
 import terrestre from '../assets/img/seccionterrestre.png'
-import { Tarjeta } from "../components/Tarjeta";
-import { GenericChild2 } from "../components/GenericChild2";
 import { TarjetaServicios } from "../components/TarjetaServicios";
 import { TarjetaTransporte } from "../components/TarjetaTransporte";
+import { ItemList } from "../pure/ItemList";
+import { CardList } from "../components/CardList"
+
+const Lista1 = [
+    <>Coordinación de trámites aduaneros.</>,
+    <>Trámites ante las entidades legales pertinentes a la operación. <b>DIAN,VUCE, INVIMA e ICA.</b></>,
+    <>Asesoría en normatividad aduanera de exportaciones e importaciones; acuerdos comerciales de integración.</>,
+    <>Coordinación operativa y presencia en los principales puertos colombianos como <b>Santa Marta, Barranquilla, Cartagena, Buenaventura e Ipiales.</b></>,
+]
+
+const Lista2 = [
+    <>Contratación de pólizas de carga internacional.</>,
+    <>Contratación de seguros generales de daños, hurto y pérdidas de mercancías por cuenta de terceros.</>,
+]
 
 export const Servicios = () => {
     return (
@@ -53,21 +64,21 @@ export const Servicios = () => {
                     >
                         <Flex flexWrap="wrap">
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <TarjetaServicios child1={'01'} child2={'Transporte internacional marítimo.'} />
+                                <a href="#transporte-maritimo"><TarjetaServicios child1={'01'} child2={'Transporte internacional marítimo.'} /></a>
                             </Box>
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <TarjetaServicios child1={'02'} child2={'Transporte internacional aéreo.'} />
+                                <a href="#transporte-aereo"><TarjetaServicios child1={'02'} child2={'Transporte internacional aéreo.'} /></a>
                             </Box>
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <TarjetaServicios child1={'03'} child2={'Transporte terrestre nacional e internacional.'} />
+                                <a href="#transporte-terrestre"><TarjetaServicios child1={'03'} child2={'Transporte terrestre nacional e internacional.'} /></a>
                             </Box>
                         </Flex>
                         <Flex flexWrap="wrap">
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" maxWidth="100%">
-                                <TarjetaServicios child1={'04'} child2={'Seguros internacionales de mercancías.'} />
+                                <a href="#adicionales"><TarjetaServicios child1={'04'} child2={'Seguros internacionales de mercancías.'} /></a>
                             </Box>
                             <Box flex={{ base: "1", md: "0.5", lg: "0.3" }} p="4" pr={{ base: "4", md: "4", lg: "12" }} maxWidth="100%">
-                                <TarjetaServicios child1={'05'} child2={'Agenciamiento aduanero.'} />
+                                <a href="#adicionales"><TarjetaServicios child1={'05'} child2={'Agenciamiento aduanero.'} /></a>
                             </Box>
                         </Flex>
                     </Container>
@@ -81,6 +92,7 @@ export const Servicios = () => {
                 backgroundRepeat='no-repeat'
                 backgroundSize='35vw'
                 minH='100vh'
+                id="transporte-maritimo"
             >
                 <Container maxW="90%" py={20} height='100%'>
                     <Flex flexWrap='wrap' height='100%'>
@@ -112,6 +124,7 @@ export const Servicios = () => {
                 backgroundRepeat='no-repeat'
                 backgroundSize='35vw'
                 minH='100vh'
+                id="transporte-aereo"
             >
                 <Container maxW="90%" py={20} height='100%'>
                     <Flex flexWrap='wrap' height='100%'>
@@ -142,6 +155,7 @@ export const Servicios = () => {
                 backgroundRepeat='no-repeat'
                 backgroundSize='35vw'
                 minH='100vh'
+                id="transporte-terrestre"
             >
                 <Container maxW="90%" py={20} height='100%'>
                     <Flex flexWrap='wrap' height='100%'>
@@ -163,6 +177,20 @@ export const Servicios = () => {
                             
                         </Flex>
                     </Flex>
+                </Container>
+            </Box>
+            {/* //servicios adicionales */}
+            <Box py={20} id="adicionales">
+                <Center>
+                <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
+                    Servicios adicionales
+                </Heading>
+                </Center>
+                <Container maxW="90%" py={20}>
+                <Flex flexWrap={'wrap'}>
+                    <CardList titulo='Agenciamiento aduanero' lista={Lista1} />
+                    <CardList titulo='Seguros internacionales de mercancias' lista={Lista2} />
+                </Flex>
                 </Container>
             </Box>
         </>

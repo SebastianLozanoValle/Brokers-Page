@@ -13,3 +13,6 @@ a{
   /* Otros estilos que desees aplicar al enlace activo */
 }
 
+html {
+  scroll-behavior: smooth;
+}
