@@ -1,68 +1,47 @@
-import { Box, Card, CardBody, Flex, Heading, Text } from "@chakra-ui/react"
-import { ImRadioUnchecked } from "react-icons/im";
+import { Box, Card, CardBody, Center, Flex, Heading, Text } from "@chakra-ui/react"
 
-export const Tarjeta = ({ margin = 0, boxShadow, height = 'auto', child1, fontSizeChild1 = '5xl', colorChild1 = 'inherit', child2, fontWeightChild2 = 'inherit' }) => {
+export const Tarjeta = ({ margin = 0, boxShadow, child1, fontSizeChild1 = '5xl', colorChild1 = 'inherit', child2, fontWeightChild2 = 'inherit', altura = 'auto', colorHover = 'brand.primary' }) => {
     return (
-        <>
+        <Center
+            width='100%'
+            height={altura}
+        >
             <Card
                 margin={margin}
                 boxShadow={boxShadow}
+                width='100%'
+                height={altura}
+                borderRadius={20}
+                _hover={{
+                    transition: '.5s',
+                    color: '#fff',
+                    bg: colorHover
+                }}
             >
                 <CardBody>
-                    <Flex flexWrap='wrap' align='center' height={height}>
+                    <Flex flexWrap='wrap' align='center' alignItems='stretch'>
                         <Text
+                            alignSelf='center'
                             fontWeight='bold'
                             fontSize={fontSizeChild1}
                             flex={0.3}
-                            p={2}
+                            p={{ base: "0", md: "0", lg: "4", xl: 8 }}
                             color={colorChild1}
                         >
                             {child1}
                         </Text>
                         <Box
+                            alignSelf='center'
                             fontWeight={fontWeightChild2}
-                            fontSize='3xl'
+                            fontSize={{ base: "lg", md: "lg", lg: "xl" }}
                             flex={1.7}
-                            p={2}
+                            p={{ base: "0", md: "0", lg: "2" }}
                         >
                             {child2}
                         </Box>
                     </Flex>
                 </CardBody>
             </Card>
-        </>
+        </Center>
     )
 }
-
-const prueba = (
-    <Card
-        boxShadow='lg'
-        margin={4}
-    >
-        <CardBody>
-            <Flex flexWrap='wrap' align='center'>
-                <Text
-                    fontWeight='bold'
-                    fontSize='100px'
-                    flex={0.3}
-                    p={2}
-                    color='brand.primary'
-                >
-                    <ImRadioUnchecked />
-                </Text>
-                <Text
-                    fontSize='3xl'
-                    flex={1.7}
-                    p={2}
-                >
-                    <Heading
-                        fontSize='5xl'
-                    >
-                        Carga suelta
-                    </Heading>
-                    Less Container Load /Break Bulk. Multimodal (<b>OTM, DTA, OTMI, DTAI</b>), en contenedor o carga suelta.
-                </Text>
-            </Flex>
-        </CardBody>
-    </Card>
-)
