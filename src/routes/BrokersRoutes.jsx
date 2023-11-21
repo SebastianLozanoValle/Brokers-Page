@@ -1,10 +1,11 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import { Servicios } from "../pages/Servicios"
+import { Inicio } from "../pages/Inicio"
 
 export const BrokersRoutes = () =>{
     return (
         <Routes>
-            <Route path="/" element={<>Inicio</>} />
+            <Route path="/" element={<Inicio />} />
             <Route path="/nosotros" element={<>nosotros</>} />
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/boletin" element={<>boletin</>} />

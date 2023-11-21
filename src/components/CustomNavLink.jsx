@@ -1,5 +1,5 @@
-import { NavLink as ReactRouterLink, useLocation } from "react-router-dom";
-import { Link as ChakraLink, useColorModeValue } from "@chakra-ui/react";
+import { NavLink, useLocation } from "react-router-dom";
+import { Link } from "@chakra-ui/react";
 
 const CustomNavLink = ({ to, children, onClick }) => {
 
@@ -8,11 +8,11 @@ const CustomNavLink = ({ to, children, onClick }) => {
     const currentPath = location.pathname;
 
     return (
-        <ChakraLink
-            as={ReactRouterLink}
+        <Link
+            as={NavLink}
             to={to}
             color={currentPath == to ? 'brand.primary' : 'brand.secondary'}
-            mr="4vw"
+            mr={{ base: '2vw', md: "2vw", lg: "4vw"}}
             _hover={{ textDecoration: "underline" }}
             style={{
                 textDecoration: "none",
@@ -20,7 +20,7 @@ const CustomNavLink = ({ to, children, onClick }) => {
             onClick={onClick}
         >
             {children}
-        </ChakraLink>
+        </Link>
     );
 };
 

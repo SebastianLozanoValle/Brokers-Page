@@ -41,11 +41,11 @@ export const NavBar = () => {
                 fontSize={20}
                 fontWeight="bold"
             >
-                <Image src={logo} alt="Logo" boxSize="50px" ml='2vw' width={200} />
+                <Image src={logo} alt="Logo" boxSize="50px" ml='2vw' width={{ base:150, sm: 200 }} />
 
                 {isMobile ? (
                     // Menú hamburguesa para móviles
-                    <Box ml="auto" display={{ base: "block", md: "none" }}>
+                    <Box ml='auto' display={{ base: "block", md: "none" }}>
                         <Button onClick={onOpen} bg='none' fontSize={30} color='brand.secondary'>
                             ☰
                         </Button>

@@ -1,12 +1,13 @@
-import { Box, Card, CardBody, Center, Container, Flex, Heading, Text, UnorderedList } from "@chakra-ui/react"
+import { Box, Center, Container, Flex, Heading, Text } from "@chakra-ui/react"
 import banner1 from '../assets/img/banner_servicios.png'
 import maritimo from '../assets/img/seccionmaritimo.png'
 import aereo from '../assets/img/seccionaereo.png'
 import terrestre from '../assets/img/seccionterrestre.png'
 import { TarjetaServicios } from "../components/TarjetaServicios";
 import { TarjetaTransporte } from "../components/TarjetaTransporte";
-import { ItemList } from "../pure/ItemList";
 import { CardList } from "../components/CardList"
+
+//este que seria el de servicios cierto
 
 const Lista1 = [
     <>Coordinación de trámites aduaneros.</>,
