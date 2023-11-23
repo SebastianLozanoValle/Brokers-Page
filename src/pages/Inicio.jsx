@@ -10,7 +10,6 @@ export const Inicio = () => {
             className="fondo"
             bg={`url(${fondo})`}
             bgSize='cover'
-            bgAttachment='fixed'
             bgPos='80%'
             minH='100vh'
         >

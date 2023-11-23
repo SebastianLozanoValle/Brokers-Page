@@ -4,9 +4,12 @@ import { useState, useEffect } from "react";
 import logo from "../assets/img/logo_nav.png";
 import CustomNavLink from "./CustomNavLink";
 
+//me lee negro?
+
+
 export const NavBar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(true);
 
     // Función para manejar cambios en el tamaño de la ventana
     const handleResize = () => {
@@ -15,6 +18,8 @@ export const NavBar = () => {
 
     // Agregar un listener para el evento resize al montar el componente
     useEffect(() => {
+        // Llamada inicial para establecer el estado correcto
+        handleResize();
         window.addEventListener("resize", handleResize);
 
         // Limpiar el listener cuando el componente se desmonta

@@ -2,7 +2,7 @@ import { Box, Container, Flex, Link, Text } from "@chakra-ui/react";
 
 export const Footer = () => 
     <footer>
-        <Box mt="auto" py="8" bg="#000" color="white" p={9}>
+        <Box height='50vh' mt="auto" py="8" bg="#000" color="#fff" p={9}>
             <Container maxW="90%" py={20}>
                 <Flex justify="space-between" align="center">
                     <Text>&copy; 2023 Tu Empresa</Text>
