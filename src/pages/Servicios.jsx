@@ -97,14 +97,14 @@ export const Servicios = () => {
             >
                 <Container maxW="90%" py={20} height='100%'>
                     <Flex flexWrap='wrap' height='100%'>
-                        <Box flex={{ base: "1", md: "2", lg: "2" }} p={4}>
+                        <Box flex={{ base: "1", md: "2", lg: "2" }} py={4}>
                             <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
                             Transporte internacional marítimo
                             </Heading>
                         </Box>
                         <Flex
                             flex={{ base: "1", md: "3", lg: "3" }}
-                            p={4}
+                            py={4}
                             alignItems='center'
                             flexDirection='column'
                             height='100%'
@@ -129,14 +129,14 @@ export const Servicios = () => {
             >
                 <Container maxW="90%" py={20} height='100%'>
                     <Flex flexWrap='wrap' height='100%'>
-                        <Box flex={2} p={4}>
+                        <Box flex={{ base: "1", md: "2", lg: "2" }} py={4}>
                             <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
                             Transporte internacional aéreo
                             </Heading>
                         </Box>
                         <Flex
-                            flex={3}
-                            p={4}
+                            flex={{ base: "1", md: "3", lg: "3" }}
+                            py={4}
                             alignItems='center'
                             flexDirection='column'
                             height='100%'
@@ -160,14 +160,14 @@ export const Servicios = () => {
             >
                 <Container maxW="90%" py={20} height='100%'>
                     <Flex flexWrap='wrap' height='100%'>
-                        <Box flex={2} p={4}>
+                        <Box flex={{ base: "1", md: "2", lg: "2" }} py={4}>
                             <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
                             Transporte terrestre nacional e internacional 
                             </Heading>
                         </Box>
                         <Flex
-                            flex={3}
-                            p={4}
+                            flex={{ base: "1", md: "3", lg: "3" }}
+                            py={4}
                             alignItems='center'
                             flexDirection='column'
                             height='100%'
@@ -182,12 +182,13 @@ export const Servicios = () => {
             </Box>
             {/* //servicios adicionales */}
             <Box py={20} id="adicionales">
+                
+                <Container maxW="90%" py={20}>
                 <Center>
                 <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
                     Servicios adicionales
                 </Heading>
                 </Center>
-                <Container maxW="90%" py={20}>
                 <Flex flexWrap={'wrap'}>
                     <CardList titulo='Agenciamiento aduanero' lista={Lista1} />
                     <CardList titulo='Seguros internacionales de mercancias' lista={Lista2} />

@@ -3,7 +3,7 @@ import { ItemList } from "../pure/ItemList"
 import { v4 as uuidv4 } from 'uuid';
 
 export const CardList = ({ titulo, lista }) =>
-    <Box flex={1} p={8} minh='100%'>
+    <Box flex={1} p={3} minh='100%'>
         <Card
             transition='.5s'
             bg='#535252'
@@ -13,6 +13,7 @@ export const CardList = ({ titulo, lista }) =>
             _hover={{
                 transform: 'scale(1.1)',
                 bg: 'brand.primary',
+                zIndex: '1'
             }}
         >
             <CardBody>
