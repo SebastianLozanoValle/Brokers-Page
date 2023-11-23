@@ -181,11 +181,11 @@ export const Servicios = () => {
                 </Container>
             </Box>
             {/* //servicios adicionales */}
-            <Box py={20} id="adicionales">
+            <Box py={10} id="adicionales">
                 
                 <Container maxW="90%" py={20}>
                 <Center>
-                <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
+                <Heading mb={10} fontSize='5xl' borderBottom='solid' color='brand.primary'>
                     Servicios adicionales
                 </Heading>
                 </Center>

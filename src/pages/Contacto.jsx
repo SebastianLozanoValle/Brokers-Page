@@ -105,7 +105,7 @@ export const Contacto = () => {
                         border='solid 4px #BF292E'
                         borderRadius='10px 0 10px 0'
                     >
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5330555775936!2d-74.13396223037105!3d4.676993431497286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c99301b47a1%3A0x607b21963daac677!2sMC%20SHIPBROKERS!5e0!3m2!1ses-419!2sco!4v1700496798651!5m2!1ses-419!2sco" width='100%' style={{borderRadius:'10px 0 10px 0'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5330555775936!2d-74.13396223037105!3d4.676993431497286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c99301b47a1%3A0x607b21963daac677!2sMC%20SHIPBROKERS!5e0!3m2!1ses-419!2sco!4v1700496798651!5m2!1ses-419!2sco" width='100%' style={{borderRadius:'10px 0 10px 0'}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </Box>
                 </Container>
 
