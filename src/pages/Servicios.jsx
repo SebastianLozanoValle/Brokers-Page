@@ -23,7 +23,9 @@ const Lista2 = [
 
 export const Servicios = () => {
     return (
-        <>
+        <Box
+            maxW='100vw'
+        >
             <Box
                 bg={`url(${banner1})`}
                 // height='100vh'
@@ -194,6 +196,6 @@ export const Servicios = () => {
                 </Flex>
                 </Container>
             </Box>
-        </>
+        </Box>
     )
 }
