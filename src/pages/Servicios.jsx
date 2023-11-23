@@ -23,9 +23,7 @@ const Lista2 = [
 
 export const Servicios = () => {
     return (
-        <Box
-            maxW='100vw'
-        >
+        <>
             <Box
                 bg={`url(${banner1})`}
                 // height='100vh'
@@ -99,13 +97,13 @@ export const Servicios = () => {
             >
                 <Container maxW="90%" py={20} height='100%'>
                     <Flex flexWrap='wrap' height='100%'>
-                        <Box flex={2} p={4}>
+                        <Box flex={{ base: "1", md: "2", lg: "2" }} p={4}>
                             <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
                             Transporte internacional marítimo
                             </Heading>
                         </Box>
                         <Flex
-                            flex={3}
+                            flex={{ base: "1", md: "3", lg: "3" }}
                             p={4}
                             alignItems='center'
                             flexDirection='column'
@@ -196,6 +194,6 @@ export const Servicios = () => {
                 </Flex>
                 </Container>
             </Box>
-        </Box>
+        </>
     )
 }
