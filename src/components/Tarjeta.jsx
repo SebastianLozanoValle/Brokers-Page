@@ -16,22 +16,22 @@ export const Tarjeta = ({ margin = 0, boxShadow, child1, fontSizeChild1 = '5xl',
                 _hover={{
                     color: '#fff',
                     bg: colorHover,
-                    transform: altura === 'auto'? 'scale(1.1)' : 'scale(1)',
+                    transform: altura === 'auto'? 'scale(1.05)' : 'scale(1)',
                 }}
             >
                 <CardBody>
-                    <Flex flexWrap='wrap' align='center' alignItems='stretch'>
+                    <Flex flexWrap='wrap'>
                         <Text
-                            alignSelf='center'
                             fontWeight='bold'
                             fontSize={fontSizeChild1}
                             flex={0.3}
-                            p={{ base: "0", md: "0", lg: "4", xl: 8 }}
+                            p={{ base: "0", md: "0", lg: "4", xl: 4 }}
                             color={colorChild1}
                         >
                             {child1}
                         </Text>
                         <Box
+                            // align='center' alignItems='stretch'
                             alignSelf='center'
                             fontWeight={fontWeightChild2}
                             fontSize={{ base: "lg", md: "lg", lg: "xl" }}

@@ -31,7 +31,7 @@ export const Servicios = () => {
                 backgroundPosition='top'
                 backgroundRepeat='no-repeat'
                 // width='100vw'
-                filter="grayscale(75%)"
+                filter="grayscale(50%)"
             >
                 <Container
                     maxW="90%"
@@ -97,13 +97,14 @@ export const Servicios = () => {
             >
                 <Container maxW="90%" py={20} height='100%'>
                     <Flex flexWrap='wrap' height='100%'>
-                        <Box flex={{ base: "1", md: "2", lg: "2" }} py={4}>
+                        <Box flex={{ base: "1", md: "1.5", lg: "1.5" }} py={4}>
                             <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
                             Transporte internacional marítimo
                             </Heading>
                         </Box>
+                        <Box flex={{ base: "0", md: "1", lg: "1" }}></Box>
                         <Flex
-                            flex={{ base: "1", md: "3", lg: "3" }}
+                            flex={{ base: "1", md: "2.5", lg: "2.5" }}
                             py={4}
                             alignItems='center'
                             flexDirection='column'
@@ -111,7 +112,7 @@ export const Servicios = () => {
                         >
                             <TarjetaTransporte titulo={'Coordinación de Operaciones'} child={<>Carga en importación y exportación vía marítima en las modalidades:<br/><b>FCL - Full Container Load /OPEN TOP, FLAT, FLAT RACK, ISO TANQUE, REFFER.</b></>} />
                             <TarjetaTransporte titulo={'Tipos de carga'} child={<>Menajes, cargas de proyecto, cargas a granel, cargas liquidas, gaseosas, carga química o DG y carga viva.</>} />
-                            <TarjetaTransporte titulo={'Carga suelta'} child={<>Less Container Load /Break Bulk. Multimodal (<b>OTM, DTA, OTMI, DTAI</b>), en contenedor o carga suelta.</>} />
+                            <TarjetaTransporte titulo={'Carga suelta'} child={<>Less Container Load /Break Bulk.<br/>Multimodal (<b>OTM, DTA, OTMI, DTAI</b>), en contenedor o carga suelta.</>} />
 
                         </Flex>
                     </Flex>
@@ -129,13 +130,14 @@ export const Servicios = () => {
             >
                 <Container maxW="90%" py={20} height='100%'>
                     <Flex flexWrap='wrap' height='100%'>
-                        <Box flex={{ base: "1", md: "2", lg: "2" }} py={4}>
+                        <Box flex={{ base: "1", md: "1.5", lg: "1.5" }} py={4}>
                             <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
                             Transporte internacional aéreo
                             </Heading>
                         </Box>
+                        <Box flex={{ base: "0", md: "1", lg: "1" }}></Box>
                         <Flex
-                            flex={{ base: "1", md: "3", lg: "3" }}
+                            flex={{ base: "1", md: "2.5", lg: "2.5" }}
                             py={4}
                             alignItems='center'
                             flexDirection='column'
@@ -160,13 +162,14 @@ export const Servicios = () => {
             >
                 <Container maxW="90%" py={20} height='100%'>
                     <Flex flexWrap='wrap' height='100%'>
-                        <Box flex={{ base: "1", md: "2", lg: "2" }} py={4}>
+                        <Box flex={{ base: "1", md: "1.5", lg: "1.5" }} py={4}>
                             <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
                             Transporte terrestre nacional e internacional 
                             </Heading>
                         </Box>
+                        <Box flex={{ base: "0", md: "1", lg: "1" }}></Box>
                         <Flex
-                            flex={{ base: "1", md: "3", lg: "3" }}
+                            flex={{ base: "1", md: "2.5", lg: "2.5" }}
                             py={4}
                             alignItems='center'
                             flexDirection='column'

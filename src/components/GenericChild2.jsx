@@ -3,10 +3,10 @@ import { Box, Heading, Text } from "@chakra-ui/react"
 export const GenericChild2 = ({ titulo, child }) => {
     return (
         <Box
-            p={4}
+            p={0}
         >
             <Heading
-                fontSize={{ base: "4xl", md: "4xl", lg: "5xl" }}
+                fontSize={{ base: "3xl", md: "3xl", lg: "3xl" }}
             >
                 {titulo}
             </Heading>
