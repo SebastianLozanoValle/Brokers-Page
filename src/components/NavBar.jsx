@@ -7,26 +7,8 @@ import CustomNavLink from "./CustomNavLink";
 //me lee negro?
 
 
-export const NavBar = () => {
+export const NavBar = ({ isMobile }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [isMobile, setIsMobile] = useState(true);
-
-    // Función para manejar cambios en el tamaño de la ventana
-    const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
-    };
-
-    // Agregar un listener para el evento resize al montar el componente
-    useEffect(() => {
-        // Llamada inicial para establecer el estado correcto
-        handleResize();
-        window.addEventListener("resize", handleResize);
-
-        // Limpiar el listener cuando el componente se desmonta
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
 
     return (
         <Box

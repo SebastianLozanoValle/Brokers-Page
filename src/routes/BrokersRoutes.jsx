@@ -3,12 +3,12 @@ import { Servicios } from "../pages/Servicios"
 import { Inicio } from "../pages/Inicio"
 import { Contacto } from "../pages/Contacto"
 
-export const BrokersRoutes = () =>{
+export const BrokersRoutes = ({ isMobile }) =>{
     return (
         <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/nosotros" element={<>nosotros</>} />
-            <Route path="/servicios" element={<Servicios />} />
+            <Route path="/servicios" element={<Servicios isMobile={isMobile} />} />
             <Route path="/boletin" element={<>boletin</>} />
             <Route path="/contacto" element={<Contacto />} />
             {/* Ruta comodín para cualquier ruta no coincidente */}

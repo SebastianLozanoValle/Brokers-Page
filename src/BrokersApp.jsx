@@ -3,13 +3,32 @@ import { NavBar } from "./components/NavBar"
 import theme from "./theme/theme"
 import { BrokersRoutes } from "./routes/BrokersRoutes"
 import { Footer } from "./components/Footer"
+import { useEffect, useState } from "react"
 
 export const BrokersApp = () => {
+    const [isMobile, setIsMobile] = useState(true);
+
+    // Función para manejar cambios en el tamaño de la ventana
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+    };
+
+    // Agregar un listener para el evento resize al montar el componente
+    useEffect(() => {
+        // Llamada inicial para establecer el estado correcto
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        // Limpiar el listener cuando el componente se desmonta
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
     return (
         <ChakraProvider theme={theme}>
-            <NavBar />
+            <NavBar isMobile={isMobile}/>
             <Box mt={82}>
-                <BrokersRoutes />
+                <BrokersRoutes isMobile={isMobile} />
             </Box>
             <Footer />
         </ChakraProvider>

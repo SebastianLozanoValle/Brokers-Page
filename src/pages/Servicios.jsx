@@ -21,7 +21,7 @@ const Lista2 = [
     <>Contratación de seguros generales de daños, hurto y pérdidas de mercancías por cuenta de terceros.</>,
 ]
 
-export const Servicios = () => {
+export const Servicios = ({ isMobile }) => {
     return (
         <>
             <Box
@@ -85,104 +85,111 @@ export const Servicios = () => {
                     </Container>
                 </Container>
             </Box>
-            {/* comienzo saegunda subseccion */}
-            <Box
-                mt={82}
-                bg={`url(${maritimo})`}
-                backgroundPosition='bottom left'
-                backgroundRepeat='no-repeat'
-                backgroundSize='35vw'
-                minH='100vh'
-                id="transporte-maritimo"
-            >
-                <Container maxW="90%" py={20} height='100%'>
-                    <Flex flexWrap='wrap' height='100%'>
-                        <Box flex={{ base: "1", md: "1.5", lg: "1.5" }} py={4}>
-                            <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
-                            Transporte internacional marítimo
-                            </Heading>
-                        </Box>
-                        <Box flex={{ base: "0", md: "1", lg: "1" }}></Box>
-                        <Flex
-                            flex={{ base: "1", md: "2.5", lg: "2.5" }}
-                            py={4}
-                            alignItems='center'
-                            flexDirection='column'
-                            height='100%'
-                        >
-                            <TarjetaTransporte titulo={'Coordinación de Operaciones'} child={<>Carga en importación y exportación vía marítima en las modalidades:<br/><b>FCL - Full Container Load /OPEN TOP, FLAT, FLAT RACK, ISO TANQUE, REFFER.</b></>} />
-                            <TarjetaTransporte titulo={'Tipos de carga'} child={<>Menajes, cargas de proyecto, cargas a granel, cargas liquidas, gaseosas, carga química o DG y carga viva.</>} />
-                            <TarjetaTransporte titulo={'Carga suelta'} child={<>Less Container Load /Break Bulk.<br/>Multimodal (<b>OTM, DTA, OTMI, DTAI</b>), en contenedor o carga suelta.</>} />
+            {/* adaptacion a mobile +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/}
+            {
+                isMobile?
+                <></>
+                :
+                <>
+                    <Box
+                        mt={82}
+                        bg={`url(${maritimo})`}
+                        backgroundPosition='bottom left'
+                        backgroundRepeat='no-repeat'
+                        backgroundSize='35vw'
+                        minH='100vh'
+                        id="transporte-maritimo"
+                    >
+                        <Container maxW="90%" py={20} height='100%'>
+                            <Flex flexWrap='wrap' height='100%'>
+                                <Box flex={{ base: "1", md: "1.5", lg: "1.5" }} py={4}>
+                                    <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
+                                    Transporte internacional marítimo
+                                    </Heading>
+                                </Box>
+                                <Box flex={{ base: "0", md: "1", lg: "1" }}></Box>
+                                <Flex
+                                    flex={{ base: "1", md: "2.5", lg: "2.5" }}
+                                    py={4}
+                                    alignItems='center'
+                                    flexDirection='column'
+                                    height='100%'
+                                >
+                                    <TarjetaTransporte titulo={'Coordinación de Operaciones'} child={<>Carga en importación y exportación vía marítima en las modalidades:<br/><b>FCL - Full Container Load /OPEN TOP, FLAT, FLAT RACK, ISO TANQUE, REFFER.</b></>} />
+                                    <TarjetaTransporte titulo={'Tipos de carga'} child={<>Menajes, cargas de proyecto, cargas a granel, cargas liquidas, gaseosas, carga química o DG y carga viva.</>} />
+                                    <TarjetaTransporte titulo={'Carga suelta'} child={<>Less Container Load /Break Bulk.<br/>Multimodal (<b>OTM, DTA, OTMI, DTAI</b>), en contenedor o carga suelta.</>} />
 
-                        </Flex>
-                    </Flex>
-                </Container>
-            </Box>
-            {/* trercera sub subseccion */}
-            <Box
-                mt={82}
-                bg={`url(${aereo})`}
-                backgroundPosition='bottom left'
-                backgroundRepeat='no-repeat'
-                backgroundSize='35vw'
-                minH='100vh'
-                id="transporte-aereo"
-            >
-                <Container maxW="90%" py={20} height='100%'>
-                    <Flex flexWrap='wrap' height='100%'>
-                        <Box flex={{ base: "1", md: "1.5", lg: "1.5" }} py={4}>
-                            <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
-                            Transporte internacional aéreo
-                            </Heading>
-                        </Box>
-                        <Box flex={{ base: "0", md: "1", lg: "1" }}></Box>
-                        <Flex
-                            flex={{ base: "1", md: "2.5", lg: "2.5" }}
-                            py={4}
-                            alignItems='center'
-                            flexDirection='column'
-                            height='100%'
-                        >
-                            <TarjetaTransporte titulo={'Coordinación de Operaciones'} child={<>Carga en importación y exportación vía aérea.</>} />
-                            <TarjetaTransporte titulo={'Tipos de carga'} child={<>Carga general, perecedera, viva, peligrosa.</>} />
-                            
-                        </Flex>
-                    </Flex>
-                </Container>
-            </Box>
-            {/* cuarta sub seccion */}
-            <Box
-                mt={82}
-                bg={`url(${terrestre})`}
-                backgroundPosition='bottom left'
-                backgroundRepeat='no-repeat'
-                backgroundSize='35vw'
-                minH='100vh'
-                id="transporte-terrestre"
-            >
-                <Container maxW="90%" py={20} height='100%'>
-                    <Flex flexWrap='wrap' height='100%'>
-                        <Box flex={{ base: "1", md: "1.5", lg: "1.5" }} py={4}>
-                            <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
-                            Transporte terrestre nacional e internacional 
-                            </Heading>
-                        </Box>
-                        <Box flex={{ base: "0", md: "1", lg: "1" }}></Box>
-                        <Flex
-                            flex={{ base: "1", md: "2.5", lg: "2.5" }}
-                            py={4}
-                            alignItems='center'
-                            flexDirection='column'
-                            height='100%'
-                        >
-                            <TarjetaTransporte titulo={'Cobertura'} child={<>Transporte terrestre en contenedores completos o de carga suelta (<b>FCL / LCL</b>).</>} />
-                            <TarjetaTransporte titulo={'Operaciones'} child={<>Transporte multimodal (<b>OTM</b>)<br/>Tránsito aduanero (<b>DTA</b>)<br/>Tránsito aduanero internacional (<b>DTAI</b>)<br/><b>ITR</b> / Desconsolidación.</>} />
-                            <TarjetaTransporte titulo={'Otros'} child={<>Cargue y descargue de mercancías.</>} />
-                            
-                        </Flex>
-                    </Flex>
-                </Container>
-            </Box>
+                                </Flex>
+                            </Flex>
+                        </Container>
+                    </Box>
+                    {/* trercera sub subseccion */}
+                    <Box
+                        mt={82}
+                        bg={`url(${aereo})`}
+                        backgroundPosition='bottom left'
+                        backgroundRepeat='no-repeat'
+                        backgroundSize='35vw'
+                        minH='100vh'
+                        id="transporte-aereo"
+                    >
+                        <Container maxW="90%" py={20} height='100%'>
+                            <Flex flexWrap='wrap' height='100%'>
+                                <Box flex={{ base: "1", md: "1.5", lg: "1.5" }} py={4}>
+                                    <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
+                                    Transporte internacional aéreo
+                                    </Heading>
+                                </Box>
+                                <Box flex={{ base: "0", md: "1", lg: "1" }}></Box>
+                                <Flex
+                                    flex={{ base: "1", md: "2.5", lg: "2.5" }}
+                                    py={4}
+                                    alignItems='center'
+                                    flexDirection='column'
+                                    height='100%'
+                                >
+                                    <TarjetaTransporte titulo={'Coordinación de Operaciones'} child={<>Carga en importación y exportación vía aérea.</>} />
+                                    <TarjetaTransporte titulo={'Tipos de carga'} child={<>Carga general, perecedera, viva, peligrosa.</>} />
+                                    
+                                </Flex>
+                            </Flex>
+                        </Container>
+                    </Box>
+                    {/* cuarta sub seccion */}
+                    <Box
+                        mt={82}
+                        bg={`url(${terrestre})`}
+                        backgroundPosition='bottom left'
+                        backgroundRepeat='no-repeat'
+                        backgroundSize='35vw'
+                        minH='100vh'
+                        id="transporte-terrestre"
+                    >
+                        <Container maxW="90%" py={20} height='100%'>
+                            <Flex flexWrap='wrap' height='100%'>
+                                <Box flex={{ base: "1", md: "1.5", lg: "1.5" }} py={4}>
+                                    <Heading fontSize='5xl' borderBottom='solid' color='brand.primary'>
+                                    Transporte terrestre nacional e internacional 
+                                    </Heading>
+                                </Box>
+                                <Box flex={{ base: "0", md: "1", lg: "1" }}></Box>
+                                <Flex
+                                    flex={{ base: "1", md: "2.5", lg: "2.5" }}
+                                    py={4}
+                                    alignItems='center'
+                                    flexDirection='column'
+                                    height='100%'
+                                >
+                                    <TarjetaTransporte titulo={'Cobertura'} child={<>Transporte terrestre en contenedores completos o de carga suelta (<b>FCL / LCL</b>).</>} />
+                                    <TarjetaTransporte titulo={'Operaciones'} child={<>Transporte multimodal (<b>OTM</b>)<br/>Tránsito aduanero (<b>DTA</b>)<br/>Tránsito aduanero internacional (<b>DTAI</b>)<br/><b>ITR</b> / Desconsolidación.</>} />
+                                    <TarjetaTransporte titulo={'Otros'} child={<>Cargue y descargue de mercancías.</>} />
+                                    
+                                </Flex>
+                            </Flex>
+                        </Container>
+                    </Box>
+                </>
+            }
             {/* //servicios adicionales */}
             <Box py={10} id="adicionales">
                 
