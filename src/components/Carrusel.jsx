@@ -55,11 +55,11 @@ export const Carrusel = ({ maritimo, aereo, terrestre }) => {
                                 titulo='transporte maritimo'
                                 child={
                                     <>
-                                        <ItemList child={<Heading fontSize='md'>Coordinación de Operaciones</Heading>} />
+                                        <ItemList p={2} child={<Heading  fontSize='md'>Coordinación de Operaciones</Heading>} />
                                         <Text fontSize='xs'>Carga en importación y exportación vía marítima en las modalidades:<br /><b>FCL - Full Container Load /OPEN TOP, FLAT, FLAT RACK, ISO TANQUE, REFFER.</b></Text>
-                                        <ItemList child={<Heading fontSize='md'>Tipos de carga</Heading>} />
+                                        <ItemList p={2} child={<Heading  fontSize='md'>Tipos de carga</Heading>} />
                                         <Text fontSize='xs'>Menajes, cargas de proyecto, cargas a granel, cargas liquidas, gaseosas, carga química o DG y carga viva.</Text>
-                                        <ItemList child={<Heading fontSize='md'>Carga suelta</Heading>} />
+                                        <ItemList p={2} child={<Heading fontSize='md'>Carga suelta</Heading>} />
                                         <Text fontSize='xs'>Less Container Load /Break Bulk.<br />Multimodal (<b>OTM, DTA, OTMI, DTAI</b>), en contenedor o carga suelta.</Text>
                                     </>
                                 }
@@ -69,14 +69,30 @@ export const Carrusel = ({ maritimo, aereo, terrestre }) => {
                             <CardTransporte
                                 imagen={aereo}
                                 titulo='transporte aereo'
-                                child={''}
+                                child={
+                                    <>
+                                        <ItemList p={2} child={<Heading  fontSize='md'>Coordinación de Operaciones</Heading>} />
+                                        <Text fontSize='xs'>Carga en importación y exportación vía aérea.</Text>
+                                        <ItemList p={2} child={<Heading  fontSize='md'>Tipos de carga</Heading>} />
+                                        <Text fontSize='xs'>Carga general, perecedera, viva, peligrosa.</Text>
+                                    </>
+                                }
                             />
                         </SwiperSlide>
                         <SwiperSlide>
                             <CardTransporte
                                 imagen={terrestre}
                                 titulo='transporte terrestre'
-                                child={''}
+                                child={
+                                    <>
+                                        <ItemList p={2} child={<Heading  fontSize='md'>Cobertura</Heading>} />
+                                        <Text fontSize='xs'>Transporte terrestre en contenedores completos o de carga suelta (<b>FCL / LCL</b>).</Text>
+                                        <ItemList p={2} child={<Heading fontSize='md'>Operaciones</Heading>} />
+                                        <Text fontSize='xs'>Transporte multimodal (<b>OTM</b>)<br />Tránsito aduanero (<b>DTA</b>)<br />Tránsito aduanero internacional (<b>DTAI</b>)<br /><b>ITR</b> / Desconsolidación.</Text>
+                                        <ItemList p={2} child={<Heading  fontSize='md'>Otros</Heading>} />
+                                        <Text fontSize='xs'>Cargue y descargue de mercancías.</Text>
+                                    </>
+                                }
                             />
                         </SwiperSlide>
                         

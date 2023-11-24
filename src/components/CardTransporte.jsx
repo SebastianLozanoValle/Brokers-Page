@@ -26,13 +26,23 @@ export const CardTransporte = ({ imagen, titulo = 'hola mundo', child }) => {
             <Box
             minH='100%'
             >
-                <Img src={imagen} bg='#fff' height='220px' width='100%'></Img>
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    height="300px" // Ajusta la altura según tus necesidades
+                    bg='#fff'
+                >
+                    <Img src={imagen} maxW="100%" maxH="100%" />
+                </Box>
+                {/* <Img src={imagen} bg='#fff' minH='505px' width='100%'></Img> */}
                 <Box
                     color='#fff'
-                    bg='brand.primary'
+                    // bg='brand.primary'
                     minH='400px'
                     borderBottomRadius={20}
                     p='25px'
+                    pb='50px'
                 >
                 <UnorderedList
                 >
