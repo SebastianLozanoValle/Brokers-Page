@@ -3,5 +3,5 @@ import { ImRadioUnchecked } from "react-icons/im";
 
 export const ItemList = ({ child }) => 
     <ListItem display='flex' alignItems='center' >
-        <Box><ImRadioUnchecked /></Box> <Text p={4}>{child}</Text>
+        <Text><ImRadioUnchecked /></Text> <Box p={4}>{child}</Box>
     </ListItem>
