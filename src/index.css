@@ -4,6 +4,10 @@
   overflow-x: hidden;
 } */
 
+:root {
+  --swiper-theme-color:#fff;
+}
+
 *{
   font-family: 'Poppins', sans-serif;
 }
@@ -24,3 +28,16 @@ html {
 /* .swiper_container{
   height: 200px;
 } */
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #fff;
+}
+
+.swiper-pagination-bullet-active{
+  background: #fff !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  transform: translateY(-100%);
+}

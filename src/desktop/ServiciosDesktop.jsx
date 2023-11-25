@@ -13,7 +13,7 @@ export const ServiciosDesktop = ({ maritimo, aereo, terrestre, Lista1, Lista2, b
                 backgroundPosition='top'
                 backgroundRepeat='no-repeat'
                 // width='100vw'
-                filter="grayscale(50%)"
+                filter="grayscale(25%)"
             >
                 <Container
                     maxW="90%"
