@@ -1,10 +1,9 @@
 import { Box, Center, Container, Flex, Heading, Text } from "@chakra-ui/react"
 import { TarjetaTransporte } from "../components/TarjetaTransporte"
 import { TarjetaServicios } from "../components/TarjetaServicios"
-import banner1 from '../assets/img/banner_servicios.png'
 import { CardList } from "../components/CardList"
 
-export const ServiciosDesktop = ({ maritimo, aereo, terrestre, Lista1, Lista2 }) => {
+export const ServiciosDesktop = ({ maritimo, aereo, terrestre, Lista1, Lista2, banner1 }) => {
     return (
         <>
             <Box

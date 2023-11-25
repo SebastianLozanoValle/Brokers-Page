@@ -1,14 +1,9 @@
-import { Box, Center, Container, Flex, Heading, Text } from "@chakra-ui/react"
 import maritimo from '../assets/img/seccionmaritimo.png'
 import aereo from '../assets/img/seccionaereo.png'
 import terrestre from '../assets/img/seccionterrestre.png'
-import { TarjetaServicios } from "../components/TarjetaServicios";
-import { TarjetaTransporte } from "../components/TarjetaTransporte";
-import { CardList } from "../components/CardList"
-import { Carrusel } from "../components/Carrusel"
 import { ServiciosDesktop } from "../desktop/ServiciosDesktop"
-
-//este que seria el de servicios cierto
+import { ServiciosMobile } from "../mobile/ServiciosMobile";
+import banner1 from '../assets/img/banner_servicios.png';
 
 const Lista1 = [
     <>Coordinación de trámites aduaneros.</>,
@@ -29,9 +24,9 @@ export const Servicios = ({ isMobile }) => {
             {/* adaptacion a mobile +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/}
             {
                 isMobile ?
-                    <Carrusel maritimo={maritimo} aereo={aereo} terrestre={terrestre} />
+                    <ServiciosMobile maritimo={maritimo} aereo={aereo} terrestre={terrestre} Lista1={Lista1} Lista2={Lista2} banner1={banner1} />
                     :
-                    <ServiciosDesktop maritimo={maritimo} aereo={aereo} terrestre={terrestre} Lista1={Lista1} Lista2={Lista2} />
+                    <ServiciosDesktop maritimo={maritimo} aereo={aereo} terrestre={terrestre} Lista1={Lista1} Lista2={Lista2} banner1={banner1} />
             }
 
         </>
