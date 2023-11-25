@@ -108,7 +108,7 @@ export const ServiciosMobile = ({ maritimo, aereo, terrestre, Lista1, Lista2, ba
                     <Card mx={4} my={8}>
                         <CardBody>
                             <Heading fontSize='2xl' pb={2} color='brand.primary'>Agenciamiento aduanero</Heading>
-                            <Flex flexWrap='wrap' height='100px' alignItems='center'>
+                            <Flex flexWrap='wrap' height='115px' alignItems='center'>
                                 <Box flex={0.8} fontSize='sm' height='100%'>
                                     {Lista1[currentItem1]}
                                 </Box>
@@ -121,7 +121,7 @@ export const ServiciosMobile = ({ maritimo, aereo, terrestre, Lista1, Lista2, ba
                     <Card mx={4} my={8}>
                         <CardBody>
                             <Heading fontSize='2xl' pb={2} color='brand.primary'>Agenciamiento aduanero</Heading>
-                            <Flex flexWrap='wrap' height='200px' alignItems='center'>
+                            <Flex flexWrap='wrap' height='115px' alignItems='center'>
                                 <Box flex={0.8} fontSize='sm' height='100%'>
                                     {Lista2[currentItem2]}
                                 </Box>
