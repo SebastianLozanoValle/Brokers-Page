@@ -26,7 +26,7 @@ const CurrencyConverter = () => {
             const currencies = 'EUR,USD,JPY,GBP,CNY';
             const format = '1';
 
-            axios.get(`http://apilayer.net/api/live?access_key=${accessKey}&currencies=${currencies}&source=${source}&format=${format}`)
+            axios.get(`https://apilayer.net/api/live?access_key=${accessKey}&currencies=${currencies}&source=${source}&format=${format}`)
                 .then(response => {
                     // Log de la respuesta de la API
                     console.log('Response from API:', response.data);
