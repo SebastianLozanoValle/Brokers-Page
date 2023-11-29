@@ -1,4 +1,6 @@
-import { Box, Container, Flex, Link, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Link as CustomLink, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const Footer = () => 
     <footer>
@@ -7,14 +9,15 @@ export const Footer = () =>
                 <Flex justify="space-between" align="center">
                     <Text>&copy; 2023 Tu Empresa</Text>
                     <Flex>
-                    <Link mx="2" href="/terminos">
+                    <CustomLink as={Link} mx="2" to="/terminos">
                         Términos de Servicio
-                    </Link>
-                    <Link mx="2" href="/privacidad">
+                    </CustomLink>
+                    <CustomLink as={Link} mx="2" to="/privacidad">
                         Política de Privacidad
-                    </Link>
+                    </CustomLink>
                     </Flex>
                 </Flex>
             </Container>
+            <a target='_blank' href="http://wa.me/573138461114" rel="nofollow noopener noreferrer" className='flotante ezquina'><FaWhatsapp className='ezquina' /></a>
         </Box>
     </footer>

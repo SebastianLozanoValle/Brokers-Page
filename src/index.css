@@ -41,3 +41,19 @@ html {
 .swiper-button-prev, .swiper-button-next {
   transform: translateY(-100%);
 }
+
+.ezquina {
+  position: fixed;
+  right: 16px;
+  bottom: 30px;
+}
+
+.flotante{
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 4em;
+  color: green;
+  z-index: 1001;
+}
