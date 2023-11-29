@@ -191,6 +191,7 @@ export const Nosotros = ({isMobile}) => {
                 isMobile?
                 <>
                  {/* su fituro componente mobile */}
+                 <NosotrosDesktop />
                 </>
                 :
                 <NosotrosDesktop />
