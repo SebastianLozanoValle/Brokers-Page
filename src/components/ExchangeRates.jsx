@@ -1,80 +1,75 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const ExchangeRates = () => {
-    const [exchangeData, setExchangeData] = useState(null);
-    const endpoint = 'latest';
-    const accessKey = '433c699f8318bb1f2dc957dd14666735';
+const source = 'COP';
 
-    const getExchangeRates = async () => {
-        try {
-            const response = await axios.get(`http://api.exchangeratesapi.io/v1/${endpoint}?access_key=${accessKey}`);
-            const { rates, base, timestamp } = response.data;
-            setExchangeData({ rates, base, timestamp });
-        } catch (error) {
-            console.error('Error fetching exchange rates:', error);
-        }
-    };
+const CurrencyConverter = () => {
+    const [exchangeRates, setExchangeRates] = useState({});
+    const [amountCOP, setAmountCOP] = useState(1);
+    const [amountSelectedCurrency, setAmountSelectedCurrency] = useState(0);
+    const [selectedCurrency, setSelectedCurrency] = useState('USD');
+    const [lastUpdate, setLastUpdate] = useState(null);
 
     useEffect(() => {
-        getExchangeRates();
+        // ... Código de useEffect para obtener tasas de cambio ...
+
     }, []);
 
-    if (!exchangeData) {
-        return <div>Loading...</div>;
-    }
+    useEffect(() => {
+        // Calcular el monto convertido cuando cambia la cantidad o las tasas de cambio
+        if (exchangeRates && amountCOP) {
+            // Asegúrate de usar el formato correcto cuando accedes a las tasas de cambio
+            const converted = amountCOP * exchangeRates[`COP${selectedCurrency}`];
+            setAmountSelectedCurrency(converted.toFixed(5));
+        }
+    }, [exchangeRates, amountCOP, selectedCurrency]);
 
-    const { rates, base, timestamp } = exchangeData;
+    const currenciesOptions = ['EUR', 'USD', 'JPY', 'GBP', 'CNY'];
 
     return (
         <div>
-            <h2>Exchange Rates</h2>
-            <p>Base Currency: {base}</p>
-            <p>Timestamp: {timestamp}</p>
-            <h3>Rates:</h3>
-            <ul>
-                {Object.entries(rates).map(([currency, rate]) => (
-                    <li key={currency}>{`${currency}: ${rate}`}</li>
-                ))}
-            </ul>
+            <h1>Currency Converter</h1>
+
+            {/* Tarjeta para el Peso Colombiano (COP) */}
+            <div>
+                <h2>Peso Colombiano (COP)</h2>
+                <label>
+                    Amount:
+                    <input
+                        type="number"
+                        value={amountCOP}
+                        onChange={(e) => setAmountCOP(e.target.value)}
+                    />
+                </label>
+                <p>
+                    {amountCOP} COP is equal to {amountSelectedCurrency} {selectedCurrency}.
+                </p>
+            </div>
+
+            {/* Tarjeta para otras divisas */}
+            <div>
+                <h2>Otras divisas</h2>
+                <label>
+                    Choose Currency:
+                    <select onChange={(e) => setSelectedCurrency(e.target.value)} value={selectedCurrency}>
+                        {currenciesOptions.map(currency => (
+                            <option key={currency} value={currency}>
+                                {currency}
+                            </option>
+                        ))}
+                    </select>
+                </label>
+                <p>
+                    {amountSelectedCurrency} {selectedCurrency} is equal to {amountCOP} COP.
+                </p>
+            </div>
+
+            {/* Mostrar la última actualización */}
+            {lastUpdate && (
+                <p>Last update: {new Date(lastUpdate).toLocaleString()}</p>
+            )}
         </div>
     );
 };
 
-export default ExchangeRates;
-
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-
-// const ExchangeRates = () => {
-//     const [exchangeRates, setExchangeRates] = useState({});
-//     const serverURL = 'http://localhost:3001/exchange-rates';  // URL de tu servidor intermedio
-
-//     useEffect(() => {
-//         const fetchExchangeRates = async () => {
-//             try {
-//                 const response = await axios.get(serverURL);
-//                 setExchangeRates(response.data.rates);
-//             } catch (error) {
-//                 console.error('Error al obtener tasas de cambio:', error);
-//             }
-//         };
-
-//         fetchExchangeRates();
-//     }, []);
-
-//     return (
-//         <div>
-//             <h2>Tasas de cambio actuales:</h2>
-//             <ul>
-//                 {Object.entries(exchangeRates).map(([currency, rate]) => (
-//                     <li key={currency}>{`${currency}: ${rate}`}</li>
-//                 ))}
-//             </ul>
-//         </div>
-//     );
-// };
-
-// export default ExchangeRates;
-
-
+export default CurrencyConverter;
