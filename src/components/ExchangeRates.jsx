@@ -2,7 +2,17 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Box, Center, Container, Flex, Heading, Input, MenuItemOption, Select, TagLabel, Text } from '@chakra-ui/react';
 
+// const source = 'COP';
+
+// Constantes temporales
 const source = 'COP';
+const exchangeRates2 = {
+    "COPEUR": 0.000229,
+    "COPUSD": 0.000251,
+    "COPJPY": 0.03708,
+    "COPGBP": 0.000198,
+    "COPCNY": 0.001782
+};
 
 const CurrencyConverter = () => {
     const [exchangeRates, setExchangeRates] = useState({});
@@ -13,51 +23,57 @@ const CurrencyConverter = () => {
     const [amountSelectedCurrencyUSD, setAmountSelectedCurrencyUSD] = useState(0);
     const [lastUpdate, setLastUpdate] = useState(null);
 
-    useEffect(() => {
-        // Verificar si es la primera vez que se abre la página
-        const isFirstTime = localStorage.getItem('isFirstTime') === null;
+    //
+    useEffect(()=>{
+        setExchangeRates(exchangeRates2)
+    },[])
+    //
 
-        // Si es la primera vez o han pasado más de 24 horas desde la última actualización, realizar la solicitud a la API
-        const lastUpdateTimestamp = localStorage.getItem('lastUpdate');
-        const twentyFourHoursInMilliseconds = 24 * 60 * 60 * 1000;
+    // useEffect(() => {
+    //     // Verificar si es la primera vez que se abre la página
+    //     const isFirstTime = localStorage.getItem('isFirstTime') === null;
 
-        if (isFirstTime || !lastUpdateTimestamp || Date.now() - Number(lastUpdateTimestamp) > twentyFourHoursInMilliseconds) {
-            const accessKey = '063823e4f7700fff0c4df92e4b774711';
-            const currencies = 'EUR,USD,JPY,GBP,CNY';
-            const format = '1';
+    //     // Si es la primera vez o han pasado más de 24 horas desde la última actualización, realizar la solicitud a la API
+    //     const lastUpdateTimestamp = localStorage.getItem('lastUpdate');
+    //     const twentyFourHoursInMilliseconds = 24 * 60 * 60 * 1000;
 
-            axios.get(`https://apilayer.net/api/live?access_key=${accessKey}&currencies=${currencies}&source=${source}&format=${format}`)
-                .then(response => {
-                    // Log de la respuesta de la API
-                    console.log('Response from API:', response.data);
+    //     if (isFirstTime || !lastUpdateTimestamp || Date.now() - Number(lastUpdateTimestamp) > twentyFourHoursInMilliseconds) {
+    //         const accessKey = '063823e4f7700fff0c4df92e4b774711';
+    //         const currencies = 'EUR,USD,JPY,GBP,CNY';
+    //         const format = '1';
 
-                    // Almacenar los datos de la respuesta en el estado
-                    setExchangeRates(response.data.quotes);
+    //         axios.get(`http://apilayer.net/api/live?access_key=${accessKey}&currencies=${currencies}&source=${source}&format=${format}`)
+    //             .then(response => {
+    //                 // Log de la respuesta de la API
+    //                 console.log('Response from API:', response.data);
 
-                    // Almacenar los datos de la respuesta en el localStorage
-                    localStorage.setItem('exchangeRates', JSON.stringify(response.data.quotes));
+    //                 // Almacenar los datos de la respuesta en el estado
+    //                 setExchangeRates(response.data.quotes);
 
-                    // Actualizar el timestamp en localStorage
-                    const currentTimestamp = Date.now();
-                    localStorage.setItem('lastUpdate', currentTimestamp);
-                    setLastUpdate(currentTimestamp);
+    //                 // Almacenar los datos de la respuesta en el localStorage
+    //                 localStorage.setItem('exchangeRates', JSON.stringify(response.data.quotes));
 
-                    // Marcar que ya se ha realizado la solicitud
-                    localStorage.setItem('isFirstTime', 'false');
-                })
-                .catch(error => {
-                    console.error('Error fetching exchange rates:', error);
-                });
-        } else {
-            // Si no es la primera vez y no ha pasado más de 24 horas, obtener los datos del localStorage
-            const storedExchangeRates = localStorage.getItem('exchangeRates');
-            if (storedExchangeRates) {
-                setExchangeRates(JSON.parse(storedExchangeRates));
-            }
+    //                 // Actualizar el timestamp en localStorage
+    //                 const currentTimestamp = Date.now();
+    //                 localStorage.setItem('lastUpdate', currentTimestamp);
+    //                 setLastUpdate(currentTimestamp);
 
-            setLastUpdate(Number(lastUpdateTimestamp));
-        }
-    }, []);
+    //                 // Marcar que ya se ha realizado la solicitud
+    //                 localStorage.setItem('isFirstTime', 'false');
+    //             })
+    //             .catch(error => {
+    //                 console.error('Error fetching exchange rates:', error);
+    //             });
+    //     } else {
+    //         // Si no es la primera vez y no ha pasado más de 24 horas, obtener los datos del localStorage
+    //         const storedExchangeRates = localStorage.getItem('exchangeRates');
+    //         if (storedExchangeRates) {
+    //             setExchangeRates(JSON.parse(storedExchangeRates));
+    //         }
+
+    //         setLastUpdate(Number(lastUpdateTimestamp));
+    //     }
+    // }, []);
 
     useEffect(() => {
         // Calcular el monto convertido cuando cambia la cantidad o las tasas de cambio
