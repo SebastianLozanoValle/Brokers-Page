@@ -1,9 +1,5 @@
-import { Box, Button, Center, Container, FormControl, FormLabel, Heading, Input, Text } from "@chakra-ui/react"
+import { Box, Center, Container, Heading, Text } from "@chakra-ui/react"
 import banner from '../assets/img/buque.jpeg'
-import { useState } from "react"
-import { FormInput } from "../components/FormInput"
-
-
 
 export const ContactoMobile = ({ form, map }) => {
 

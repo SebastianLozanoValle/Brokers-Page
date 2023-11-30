@@ -5,24 +5,27 @@
 } */
 
 :root {
-  --swiper-theme-color:#fff;
+  --swiper-theme-color: #fff;
 }
 
-*{
+* {
   font-family: 'Poppins', sans-serif;
 }
 
-a{
+a {
   text-decoration: none !important;
 }
 
 .active-link {
-  color: #FF0000 !important; /* Cambia esto al color que desees para el enlace activo */
+  color: #FF0000 !important;
+  /* Cambia esto al color que desees para el enlace activo */
   /* Otros estilos que desees aplicar al enlace activo */
 }
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #dc3545 #f0f0f0 !important;
 }
 
 /* .swiper_container{
@@ -34,11 +37,12 @@ html {
   color: #fff;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background: #fff !important;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   transform: translateY(-100%);
 }
 
@@ -48,7 +52,7 @@ html {
   bottom: 30px;
 }
 
-.flotante{
+.flotante {
   height: 64px;
   width: 64px;
   border-radius: 50%;
@@ -56,4 +60,32 @@ html {
   font-size: 4em;
   color: green;
   z-index: 1001;
+}
+
+/* Estilo para el pulgar de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: #dc3545 !important;
+  /* Color del pulgar (cambia al color que desees) */
+  border-radius: 10px !important;
+  /* Puntas redondeadas */
+}
+
+::-moz-scrollbar-thumb {
+  background-color: #dc3545 !important;
+  border-radius: 10px !important;
+}
+
+/* Estilo para el fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: #f0f0f0 !important;
+  /* Color de fondo de la barra de desplazamiento (cambia al color que desees) */
+}
+
+::-moz-scrollbar-track {
+  background: #f0f0f0 !important;
+}
+
+/* Ocultar las flechas de desplazamiento */
+::-webkit-scrollbar-button {
+  display: none !important;
 }

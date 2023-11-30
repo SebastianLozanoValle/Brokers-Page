@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import banner from '../assets/img/buque.jpeg'
 import { Box, Center, Container, Flex, Heading, Input, MenuItemOption, Select, TagLabel, Text } from '@chakra-ui/react';
 
 // const source = 'COP';
@@ -123,95 +124,145 @@ const CurrencyConverter = () => {
     };
 
     return (
-        <Box my={40}>
-            <Center>
-                <Container minW='100%'>
-                    <Center>
-                        <Heading m={5}>Boletín Informativo</Heading>
-                    </Center>
-
-                    <Container display='flex' flexWrap='wrap' minW='90vw' minH='auto'>
-                        {/* Tarjeta para el Peso Colombiano (COP) */}
-                        <Center ml='auto' mr={{ base: "auto", md: "auto", lg: 5 }} my={5} minH='100%' >
-                            <Box flex={1} p={10} boxShadow='2xl' my={5} borderRadius={20} width='100%' height='100%'
-                                _hover={{
-                                    transform: 'scale(1.2)',
-                                    bg: 'brand.primary',
-                                    color: '#fff'
-                                }}
-                                transition='.5s'
+        <>
+            <Box className="container1"
+                bg={`url(${banner})`}
+                bgSize='cover'
+                bgAttachment='local'
+                bgPos='center'
+                w='100%'
+                h='200px'
+                display='flex'
+                justifyContent='left'
+                alignItems='flex-start'
+            >
+                <Box className="container"
+                    bgGradient="linear(to-b, #828282, transparent 30%)"
+                    width='100%'
+                    height='150%'
+                    display='flex'
+                    flexDirection='column'
+                    justifyContent='center'
+                    alignItems='center'
+                >
+                    <Box
+                        _hover={{
+                            "& .linea": {
+                            transform: 'scale(3)',
+                            },
+                        }}
+                        >
+                        <Center>
+                            <Heading
+                            color='#fff'
+                            fontSize='3xl'
+                            textAlign='center'
                             >
-                                <Heading>Peso Colombiano (COP)</Heading>
-                                <Box>
-                                    <Box>
-                                        <Text
-                                            py={4}
-                                        >
-                                            Monto:
-                                        </Text>
-                                        <Input
-                                            mb={4}
-                                            type="number"
-                                            value={amountCOP}
-                                            onChange={(e) => handleAmountCOPChange(e.target.value)}
-                                        />
-                                    </Box>
-                                </Box>
-                                <Text color='brand.background'>
-                                    {amountCOP} COP equivale a {amountSelectedCurrency} {selectedCurrency}.
-                                </Text>
-                            </Box>
+                            Boletín informativo
+                            </Heading>
                         </Center>
+                        <Center>
+                            <Box
+                            className="linea"
+                            transition='.5s'
+                            width='100px'
+                            borderTop='2px solid #fff'
+                            mb='10px'
+                            textAlign='center'
+                            ></Box>
+                        </Center>
+                    </Box>
+                    {/* <Text>Si necesitas alguno de nuestros servicios o desea realizar algun tipo de cotizacion con gusto lo atenderemos</Text> */}
+                </Box>
+            </Box>
+            <Box my={40}>
+                <Center>
+                    <Container minW='100%'>
 
-                        {/* Tarjeta para otras Boxisas */}
-                        <Center mr='auto' ml={{ base: "auto", md: "auto", lg: 5 }} my={5} minH='100%' >
-                            <Box flex={1} p={10} boxShadow='2xl' my={5} borderRadius={20} width='100%' height='100%'
-                                _hover={{
-                                    transform: 'scale(1.2)',
-                                    bg: '#c9c9c9',
-                                    color: 'brand.primary'
-                                }}
-                                transition='.5s'
-                            >
-                                {/* <h2>Otras Divisas</h2> */}
-                                <label>
-                                    <Heading pb={4}>Elija La Divisa:</Heading>
-                                    <Select onChange={(e) => setSelectedCurrency(e.target.value)} value={selectedCurrency}>
-                                        {currenciesOptions.map(currency => (
-                                            <option key={currency} value={currency}>
-                                                {currency}
-                                            </option>
-                                        ))}
-                                    </Select>
-                                </label>
-                                <Box>
-                                    <label>
-                                        <Text
-                                            py={4}
-                                        >
-                                            Monto:
-                                        </Text>
-                                        <Input
-                                            type="number"
-                                            value={amountUSD}
-                                            onChange={(e) => handleAmountUSDChange(e.target.value)}
-                                        />
-                                    </label>
+
+                        <Container display='flex' flexWrap='wrap' minW='90vw' minH='auto'>
+                            {/* Tarjeta para el Peso Colombiano (COP) */}
+                            <Center ml='auto' mr={{ base: "auto", md: "auto", lg: 5 }} my={5} minH='100%' >
+                                <Box flex={1} p={10} boxShadow='2xl' my={5} borderRadius={20} width='100%' height='100%'
+                                    _hover={{
+                                        transform: 'scale(1.2)',
+                                        bg: 'brand.primary',
+                                        color: '#fff'
+                                    }}
+                                    transition='.5s'
+                                >
+                                    <Heading>Peso Colombiano (COP)</Heading>
+                                    <Box>
+                                        <Box>
+                                            <Text
+                                                py={4}
+                                            >
+                                                Monto:
+                                            </Text>
+                                            <Input
+                                                mb={4}
+                                                type="number"
+                                                value={amountCOP}
+                                                onChange={(e) => handleAmountCOPChange(e.target.value)}
+                                            />
+                                        </Box>
+                                    </Box>
+                                    <Text color='brand.background'>
+                                        {amountCOP} COP equivale a {amountSelectedCurrency} {selectedCurrency}.
+                                    </Text>
                                 </Box>
-                                {/* <Text>
+                            </Center>
+
+                            {/* Tarjeta para otras Boxisas */}
+                            <Center mr='auto' ml={{ base: "auto", md: "auto", lg: 5 }} my={5} minH='100%' >
+                                <Box flex={1} p={10} boxShadow='2xl' my={5} borderRadius={20} width='100%' height='100%'
+                                    _hover={{
+                                        transform: 'scale(1.2)',
+                                        bg: '#c9c9c9',
+                                        color: 'brand.primary'
+                                    }}
+                                    transition='.5s'
+                                >
+                                    {/* <h2>Otras Divisas</h2> */}
+                                    <label>
+                                        <Heading pb={4}>Elija La Divisa:</Heading>
+                                        <Select onChange={(e) => setSelectedCurrency(e.target.value)} value={selectedCurrency}>
+                                            {currenciesOptions.map(currency => (
+                                                <option key={currency} value={currency}>
+                                                    {currency}
+                                                </option>
+                                            ))}
+                                        </Select>
+                                    </label>
+                                    <Box>
+                                        <label>
+                                            <Text
+                                                py={4}
+                                            >
+                                                Monto:
+                                            </Text>
+                                            <Input
+                                                type="number"
+                                                value={amountUSD}
+                                                onChange={(e) => handleAmountUSDChange(e.target.value)}
+                                            />
+                                        </label>
+                                    </Box>
+                                    {/* <Text>
                                     {amountUSD} {selectedCurrency} equivale a {amountSelectedCurrencyUSD} COP.
                                 </Text> */}
-                            </Box>
-                        </Center>
-                    </Container>
+                                </Box>
+                            </Center>
+                        </Container>
 
-                    {/* Mostrar la última actualización */}
-                    {lastUpdate && (
-                        <Center><Text>Ultima actualizacion: {new Date(lastUpdate).toLocaleString()}</Text></Center>
-                    )}
-                </Container>
-            </Center>
-        </Box>
+                        {/* Mostrar la última actualización */}
+                        {lastUpdate && (
+                            <Center><Text>Ultima actualizacion: {new Date(lastUpdate).toLocaleString()}</Text></Center>
+                        )}
+                    </Container>
+                </Center>
+            </Box>
+        </>
     );
 };
 
