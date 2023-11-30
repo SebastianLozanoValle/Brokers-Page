@@ -5,6 +5,7 @@ import { Contacto } from "../pages/Contacto"
 import ExchangeRates from "../components/ExchangeRates"
 import { Nosotros } from "../pages/Nosotros"
 import { Redireccionesejemplo } from "../pages/Redireccionesejemplo"
+import { Politica } from "../pages/Politica"
 
 export const BrokersRoutes = ({ isMobile }) =>{
     return (
@@ -13,8 +14,9 @@ export const BrokersRoutes = ({ isMobile }) =>{
             <Route path="/nosotros" element={<Nosotros isMobile={isMobile}/>} />
             <Route path="/servicios" element={<Servicios isMobile={isMobile} />} />
             <Route path="/boletin" element={<ExchangeRates/>} />
-            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/contacto" element={<Contacto isMobile={isMobile} />} />
             <Route path="/terminos" element={<>terminos y condiciones</>} />
+            <Route path="/politica" element={<Politica />} />
             <Route path="/redirecciones" element={<Redireccionesejemplo/>} />
             {/* Ruta comodín para cualquier ruta no coincidente */}
             <Route path="/*" element={<Navigate to="/404" />} />

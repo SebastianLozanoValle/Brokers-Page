@@ -1,27 +1,3 @@
-// import { Box, Container, Flex, Link as CustomLink, Text } from "@chakra-ui/react";
-// import { Link } from "react-router-dom";
-// import { FaWhatsapp } from "react-icons/fa";
-
-// export const Footer = () => 
-//     <footer>
-//         <Box height='50vh' mt="auto" py="8" bg="#000" color="#fff" p={9}>
-//             <Container maxW="90%" py={20}>
-//                 <Flex justify="space-between" align="center">
-//                     <Text>&copy; 2023 Tu Empresa</Text>
-//                     <Flex>
-//                     <CustomLink as={Link} mx="2" to="/terminos">
-//                         Términos de Servicio
-//                     </CustomLink>
-//                     <CustomLink as={Link} mx="2" to="/privacidad">
-//                         Política de Privacidad
-//                     </CustomLink>
-//                     </Flex>
-//                 </Flex>
-//             </Container>
-//             <a target='_blank' href="http://wa.me/573138461114" rel="nofollow noopener noreferrer" className='flotante ezquina'><FaWhatsapp className='ezquina' /></a>
-//         </Box>
-//     </footer>
-
 import React from 'react';
 import { Box, Center, Container, Flex, Img } from "@chakra-ui/react";
 import { Link as CustomLink } from '@chakra-ui/react';
@@ -49,8 +25,9 @@ export const Footer = () => (
                     <Img
                         src={logoempresa}
                         height='auto'
-                        width='200px'
+                        maxW={{ base: '150px', md: '200px', lg: '250px' }}
                         flex={1}
+                        mb={{ base: 6, md: 0, lg: 0 }}
                     />
                     <Container
                         display='block'
@@ -58,6 +35,7 @@ export const Footer = () => (
                         margin='0px'
                         height='100%'
                         flex={1}
+                        mb={{ base: 6, md: 0, lg: 0 }}
                     >
                         <CustomLink as={Link} to={'/'}>
                             Inicio
@@ -75,9 +53,9 @@ export const Footer = () => (
 
                     <Box flex={1}>
                         <Container width='auto' display='flex' gap='40px' justifyContent='center' alignItems='center'>
-                            <a href="https://www.facebook.com/mcshipbrokers/?locale=es_LA"><Box fontSize='40px'>{<FaFacebookF />}</Box></a>
-                            <a href="https://www.linkedin.com/company/2879222/admin/feed/posts/"><Box fontSize={'40px'}>{<CiLinkedin />}</Box></a>
-                            <a href="https://www.instagram.com/mcshipbrokersint/"><Box fontSize={'40px'}>{<FaInstagram />}</Box></a>
+                            <a target='_blank' href="https://www.facebook.com/mcshipbrokers/?locale=es_LA"><Box fontSize='40px'>{<FaFacebookF />}</Box></a>
+                            <a target='_blank' href="https://www.linkedin.com/company/2879222/admin/feed/posts/"><Box fontSize={'40px'}>{<CiLinkedin />}</Box></a>
+                            <a target='_blank' href="https://www.instagram.com/mcshipbrokersint/"><Box fontSize={'40px'}>{<FaInstagram />}</Box></a>
                         </Container>
                     </Box>
 

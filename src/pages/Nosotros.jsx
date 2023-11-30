@@ -1,6 +1,6 @@
 import { NosotrosDesktop } from "../desktop/NosotrosDesktop"
 import imagen from '../assets/img/componente-avion-carga.jpg'
-import { Box, Container, Heading, Text, } from "@chakra-ui/react"
+import { Box, Center, Container, Heading, Img, Text, } from "@chakra-ui/react"
 import nosotros from '../assets/img/logonosotros.png'
 import responsabilidad from '../assets/img/responsabilidad.png'
 import honestidad from '../assets/img/honestidad.png'
@@ -11,6 +11,7 @@ import logoacre2 from '../assets/img/logoacre2.png'
 import logoacre3 from '../assets/img/logoacre3.png'
 import logoacre4 from '../assets/img/logoacre4.png'
 import { Sedes } from '../components/Sedes'
+import { NosotrosMobile } from "../mobile/NosotrosMobile"
 
 export const Nosotros = ({isMobile}) => {
     return (
@@ -26,7 +27,7 @@ export const Nosotros = ({isMobile}) => {
                 <Container
                 maxW="90%"
                 py={20}
-                mb={300}
+                // mb={300}
                 >
                 <Heading
                     fontSize='5xl'
@@ -42,7 +43,7 @@ export const Nosotros = ({isMobile}) => {
 
                 <Text
                     color='#fff'
-                    fontSize='18px'
+                    fontSize={{base: '17px', md: '14px', lg: '18px'}}
                     textAlign='justify'
                 >
                     MC SHIPBROKERS SAS, inicia operaciones en la ciudad de Bogotá el 6 de junio
@@ -145,54 +146,51 @@ export const Nosotros = ({isMobile}) => {
                 </Heading>
 
                 </Box>
-                <Box
+                <Center
                 display='flex'
                 width='100%'
                 height='300px'
-                marginTop='100px'
+                // marginTop='100px'
                 >
-                <Container
-                    width='170px'
+                    <Box
+                        // width='170px'
 
-                >
-                    <img src={nosotros} />
-                    <Text
-                        textAlign='center'
-                        color='white'
-                        fontSize='13px'
-                    >Profesionalismo</Text>
-                </Container>
-                <Container
-                    width='200px'
-                >
-                    <img src={responsabilidad} />
-                    <Text
-                        textAlign='center'
-                        color='white'
-                        fontSize='13px'
-                    >Responsabilidad</Text>
-                </Container>
+                    >
+                        <Img src={nosotros} width='150px' height='150px' />
+                        <Text
+                            textAlign='center'
+                            color='white'
+                            fontSize='13px'
+                        >Profesionalismo</Text>
+                    </Box>
+                    <Box
+                        // width='170px'
+                    >
+                        <Img src={responsabilidad} width='150px' height='150px' />
+                        <Text
+                            textAlign='center'
+                            color='white'
+                            fontSize='13px'
+                        >Responsabilidad</Text>
+                    </Box>
 
-                <Container
-                    width='200px'
-                >
-                    <img src={honestidad} />
-                    <Text
-                        textAlign='center'
-                        color='white'
-                        fontSize='13px'
-                    >Honestidad</Text>
-                </Container>
-                </Box>
+                    <Box
+                        // width='170px'
+                    >
+                        <Img src={honestidad} width='150px' height='150px' />
+                        <Text
+                            textAlign='center'
+                            color='white'
+                            fontSize='13px'
+                        >Honestidad</Text>
+                    </Box>
+                </Center>
 
             </Box>
 
             {
                 isMobile?
-                <>
-                 {/* su fituro componente mobile */}
-                 <NosotrosDesktop />
-                </>
+                <NosotrosMobile />
                 :
                 <NosotrosDesktop />
             }

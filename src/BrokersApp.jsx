@@ -4,6 +4,7 @@ import theme from "./theme/theme"
 import { BrokersRoutes } from "./routes/BrokersRoutes"
 import { Footer } from "./components/Footer"
 import { useEffect, useState } from "react"
+import ScrollToTop from "./components/ScrollToTop"
 
 export const BrokersApp = () => {
     const [isMobile, setIsMobile] = useState(true);
@@ -26,6 +27,7 @@ export const BrokersApp = () => {
     }, []);
     return (
         <ChakraProvider theme={theme}>
+            <ScrollToTop />
             <NavBar isMobile={isMobile}/>
             <Box mt={82}>
                 <BrokersRoutes isMobile={isMobile} />

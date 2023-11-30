@@ -22,7 +22,7 @@ export const Sedes = ({ number, child }) => {
                     borderRadius: 'full',
                     position: 'absolute',
                     top: '50%',
-                    left: '-8%',
+                    left: '-10%',
                     transform: 'translate(-50%, -50%)',
                     zIndex: '-1',
                 },
