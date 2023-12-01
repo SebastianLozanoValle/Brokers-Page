@@ -15,9 +15,12 @@ export const ServiciosDesktop = ({ maritimo, aereo, terrestre, Lista1, Lista2, b
                 // width='100vw'
                 filter="grayscale(25%)"
             >
+                <Box position='absolute' top='0' right='0' bottom='0' left='0' bg='rgba(0, 0, 0, 0.4)'></Box>
+          
                 <Container
                     maxW="90%"
                     py={20}
+                    position='relative'
                 >
                     <Heading
                         fontSize='5xl'

@@ -32,7 +32,7 @@ export const NavBar = ({ isMobile }) => {
                 fontSize={20}
                 fontWeight="bold"
             >
-                <Image src={logo} alt="Logo" boxSize="50px" ml='2vw' width={200} />
+                <Image src={logo} alt="Logo" boxSize="50px" ml='2vw' width={250} />
 
                 {isMobile ? (
                     // Menú hamburguesa para móviles
