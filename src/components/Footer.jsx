@@ -58,11 +58,16 @@ export const Footer = () => (
                             <a target='_blank' href="https://www.linkedin.com/company/2879222/admin/feed/posts/"><Box fontSize={'40px'}>{<CiLinkedin />}</Box></a>
                             <a target='_blank' href="https://www.instagram.com/mcshipbrokersint/"><Box fontSize={'40px'}>{<FaInstagram />}</Box></a>
                         </Container>
-                    </Box>
-
-                    <a target='_blank' href="http://wa.me/573138461114" rel="nofollow noopener noreferrer" className='flotante ezquina'><FaWhatsapp className='ezquina' /></a>
+                    </Box>  
+                         
+                       <a target='_blank' href="http://wa.me/573138461114" rel="nofollow noopener noreferrer" className='flotante ezquina'><FaWhatsapp className='ezquina' /></a>
                 </Flex>
+                <Box textAlign='center' justifyContent='center' color='white' paddingBottom='20px' fontSize='14px'>
+                            &copy; 2023 NetWord, Todos los derechos reservados <br/>
+                            <a href='mailto:networdcol@gmail.com'>networdcol@gmail.com</a>
+                        </Box>
             </Container>
+            
         </Box>
     </footer>
 );
