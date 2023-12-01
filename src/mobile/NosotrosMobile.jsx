@@ -1,5 +1,5 @@
 import { Box, Container, Heading, Text } from "@chakra-ui/react"
-import mar from '../assets/img/mar.jpg'
+import mar1 from '../assets/img/mar1.jpg'
 import logoacre from '../assets/img/logoacre.png'
 import logoacre1 from '../assets/img/logoacre1.png'
 import logoacre2 from '../assets/img/logoacre2.png'
@@ -245,7 +245,7 @@ export const NosotrosMobile = () => {
             </Box>
             <Box
                 height='300px'
-                bg={`url(${ mar })`}
+                bg={`url(${ mar1 })`}
                 backgroundSize='cover'
                 backgroundPosition='center'
                 // backgroundAttachment='fixed'

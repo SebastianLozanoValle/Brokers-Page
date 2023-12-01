@@ -4,7 +4,7 @@ import { Box, Center, Container, Heading, Img, Text, } from "@chakra-ui/react"
 import nosotros from '../assets/img/logonosotros.png'
 import responsabilidad from '../assets/img/responsabilidad.png'
 import honestidad from '../assets/img/honestidad.png'
-import mar from '../assets/img/mar.jpg'
+import mar1 from '../assets/img/mar1.jpg'
 import logoacre from '../assets/img/logoacre.png'
 import logoacre1 from '../assets/img/logoacre1.png'
 import logoacre2 from '../assets/img/logoacre2.png'
@@ -22,12 +22,16 @@ export const Nosotros = ({isMobile}) => {
                 backgroundPosition='center'
                 backgroundRepeat='no-repeat'
                 filter="grayscale(25%)"
+                position='relative'
 
             >
+                <Box position='absolute' top='0' right='0' bottom='0' left='0' bg='rgba(0, 0, 0, 0.5)'></Box>
+          
                 <Container
                 maxW="90%"
                 py={20}
                 // mb={300}
+                position='relative'
                 >
                 <Heading
                     fontSize='5xl'
@@ -37,6 +41,7 @@ export const Nosotros = ({isMobile}) => {
                     width='300px'
                     textAlign='left'
                     mb={10}
+                    position='relative'
                 >
                     Nosotros
                 </Heading>
@@ -45,6 +50,7 @@ export const Nosotros = ({isMobile}) => {
                     color='#fff'
                     fontSize={{base: '17px', md: '14px', lg: '18px'}}
                     textAlign='justify'
+                    
                 >
                     MC SHIPBROKERS SAS, inicia operaciones en la ciudad de Bogotá el 6 de junio
                     del año 2012, nace en Colombia como un integrador de servicios logísticos
@@ -78,14 +84,15 @@ export const Nosotros = ({isMobile}) => {
                 maxW='90%'
                 flexWrap='wrap'
                 marginBottom='100px'
+                position='relative'
                 >
-                <Container
+                  <Container
                     height='200px'
                     width='400px'
                     bg='#fff'
                     borderRadius='30px'
                     overflow='hidden'
-                >
+                  >
                     <Heading
                         textAlign='left'
                         margin='15px 10px'
@@ -134,6 +141,7 @@ export const Nosotros = ({isMobile}) => {
                 alignItems='center'
                 justifyContent='center'
                 display='flex'
+                position='relative'
                 >
                 <Heading
                     display='flex'
@@ -151,6 +159,7 @@ export const Nosotros = ({isMobile}) => {
                 width='100%'
                 height='300px'
                 // marginTop='100px'
+                pos='relative'
                 >
                     <Box
                         // width='170px'
@@ -185,7 +194,7 @@ export const Nosotros = ({isMobile}) => {
                         >Honestidad</Text>
                     </Box>
                 </Center>
-
+                
             </Box>
 
             {

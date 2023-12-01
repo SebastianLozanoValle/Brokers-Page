@@ -12,11 +12,17 @@ export const Inicio = () => {
             bgSize='cover'
             bgPos='80%'
             minH='100vh'
-        >
+            position='relative'
+            
+        >  
+           <Box position='absolute' top='0' right='0' bottom='0' left='0' bg='rgba(0, 0, 0, 0.5)'></Box>
+          
+       
             <Box
                 color='#fff'
                 className="main"
                 textAlign='center'
+                position='relative'
             >
                 <Heading
                     pt={{ base: "25px", md: "50px", lg:'50px' }}
@@ -41,6 +47,7 @@ export const Inicio = () => {
                 >
                     Transporte internacional de mercancias
                 </Heading>
+                
                 <Box
                     pt={{ base: "3px", md: "10px", lg: '10px'}}
                     m={{ base: "20px", md: "60px", lg: '60px'}}
@@ -55,8 +62,11 @@ export const Inicio = () => {
                         </Text>
                     </Center>
                 </Box>
+                
             </Box>
-            <Container pt={{ base: 0, md: 11, lg: 20 }} pb={{ base: 5, md: 10, lg: 20 }} maxW={{base: '90%', md: '70%', lg: '70%'}}>
+            
+            
+            <Container pt={{ base: 0, md: 11, lg: 20 }} pb={{ base: 5, md: 10, lg: 20 }} maxW={{base: '90%', md: '70%', lg: '70%'}} position='relative'>
                 <Box className="cajas">
                     <Flex flexWrap='wrap' color='#fff'>
                         <IconoInicio to='/nosotros' child1={<RiTeamLine />} child2='Nosotros' />
@@ -65,7 +75,9 @@ export const Inicio = () => {
                         <IconoInicio to='/boletin' child1={<FaChartLine />} child2='Boletín' />
                     </Flex>
                 </Box>
+                
             </Container>
+           
         </Box>
     )
 }

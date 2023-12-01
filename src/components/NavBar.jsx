@@ -1,10 +1,13 @@
 import { Box, Flex, VStack, Image, Button, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Link as ChakraLink } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
+
 import logo from "../assets/img/logo_nav.png";
 import CustomNavLink from "./CustomNavLink";
-
-//me lee negro?
+import imagen from '../assets/img/logoempresa.png';
+import { FaFacebookF } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa6";
 
 
 export const NavBar = ({ isMobile }) => {
@@ -15,7 +18,7 @@ export const NavBar = ({ isMobile }) => {
             maxW='100vw'
             position="fixed"
             top="0"
-            left="0"
+            left="0" 
             right="0"
             zIndex="999"
             bg="brand.background"
@@ -40,7 +43,7 @@ export const NavBar = ({ isMobile }) => {
                     </Box>
                 ) : (
                     // Menú para escritorio
-                    <Flex ml="auto" align="center">
+                    <Flex ml="auto" align="center" color='white'>
                         {/* Puedes agregar más elementos aquí */}
                         <CustomNavLink to='/' children='Inicio' />
                         <CustomNavLink to='/nosotros' children='Nosotros' />
@@ -52,17 +55,28 @@ export const NavBar = ({ isMobile }) => {
 
                 <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
                     <DrawerOverlay />
-                    <DrawerContent>
+                    <DrawerContent bg='black'>
                         <DrawerCloseButton />
-                        <DrawerHeader>Menú</DrawerHeader>
-                        <DrawerBody>
-                            <VStack spacing="4">
+                        <DrawerHeader color='white'>Menú</DrawerHeader>
+                        <DrawerBody >
+                            <VStack spacing="3" paddingTop='60px' display='flex' justifyContent='center'>
                                 {/* Puedes agregar más elementos aquí */}
-                                <CustomNavLink to="/" onClick={onClose} children="Inicio" />
+                                <CustomNavLink to="/" onClick={onClose} children="Inicio"/>
                                 <CustomNavLink to="/nosotros" onClick={onClose} children="Nosotros" />
                                 <CustomNavLink to="/servicios" onClick={onClose} children="Servicios" />
                                 <CustomNavLink to="/boletin" onClick={onClose} children="Boletín" />
                                 <CustomNavLink to="/contacto" onClick={onClose} children="Contacto" />
+                                <Box pt={10}
+                                display='flex'
+                                backgroundPosition='center'
+                                >
+                                <img src={imagen}/>
+                                </Box>
+                                <Box display='flex' color='white' gap='20px'>
+                               <a target='_blank' href="https://www.facebook.com/mcshipbrokers/?locale=es_LA"><Box fontSize='20px'>{<FaFacebookF />}</Box></a>
+                               <a target='_blank' href="https://www.linkedin.com/company/2879222/admin/feed/posts/"><Box fontSize={'20px'}>{<CiLinkedin />}</Box></a>
+                               <a target='_blank' href="https://www.instagram.com/mcshipbrokersint/"><Box fontSize={'20px'}>{<FaInstagram />}</Box></a>
+                               </Box>
                             </VStack>
                         </DrawerBody>
                     </DrawerContent>

@@ -3,13 +3,14 @@ import { Box, Center, Container, Heading, Text } from "@chakra-ui/react"
 import nosotros from '../assets/img/logonosotros.png'
 import responsabilidad from '../assets/img/responsabilidad.png'
 import honestidad from '../assets/img/honestidad.png'
-import mar from '../assets/img/mar.jpg'
+import mar1 from '../assets/img/mar1.jpg'
 import logoacre from '../assets/img/logoacre.png'
 import logoacre1 from '../assets/img/logoacre1.png'
 import logoacre2 from '../assets/img/logoacre2.png'
 import logoacre3 from '../assets/img/logoacre3.png'
 import logoacre4 from '../assets/img/logoacre4.png'
 import { Sedes } from '../components/Sedes'
+
 
 export const NosotrosDesktop = () => {
    return (
@@ -75,7 +76,7 @@ export const NosotrosDesktop = () => {
 
          <Box
             height='300px'
-            bg={`url(${mar})`}
+            bg={`url(${mar1})`}
             backgroundSize='cover'
             backgroundPosition='center'
          />

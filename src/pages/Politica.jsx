@@ -3,14 +3,15 @@ import { Link as LinkRouter } from "react-router-dom"
 import politica from "../assets/documents/6. F 006 V.1 2020  Politica de tratamiento de datos.pdf"
 // import mar1 from '../assets/img/mar1.jpg'
 import { MdFileDownload } from "react-icons/md";
+import mar1 from '../assets/img/mar.jpg'
 
 export const Politica = () => {
     return (
         <>
             <Box
-                // bg={url(${ mar1 })}
+                bg={`url(${mar1})`}
                 backgroundSize='cover' position='relative' margin='0' height='300px' backgroundPosition='center' dispaly='flex' alignItems='center' >
-                <Box position='absolute' top='0' right='0' bottom='0' left='0' bg='rgba(0, 0, 0, 0.5)'>
+                <Box position='absolute' top='0' right='0' bottom='0' left='0' bg='rgba(0, 0, 0, 0.4)'>
                     <Heading textAlign='center' color='white' paddingTop='200px' >Politica de tratamiento de datos</Heading>
                     {/* <Center>
                         <Link href="#descargar">Descargar documento</Link>
