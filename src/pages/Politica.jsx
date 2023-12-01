@@ -1,6 +1,6 @@
 import { Text, Box, Container, Heading, Link, Flex, Center } from "@chakra-ui/react"
 import { Link as LinkRouter } from "react-router-dom"
-import politicas from "../assets/documents/2. F 002 V.1 2020 Contrato de servicios de Agenciamiento de carga Internacional[1].pdf"
+import politica from "../assets/documents/6. F 006 V.1 2020  Politica de tratamiento de datos.pdf"
 // import mar1 from '../assets/img/mar1.jpg'
 import { MdFileDownload } from "react-icons/md";
 
@@ -153,7 +153,7 @@ export const Politica = () => {
                 <Center>
                     <Flex>
                         <Link p={4}  bg='brand.background' borderRadius={40} m={4} color='brand.primary' as={LinkRouter} to='/contacto'>Contactenos</Link>
-                        <Link p={4}  bg='brand.background' borderRadius={40} m={4} color='brand.primary' id="descargar" href={politicas} download={'2. F 002 V.1 2020 Contrato de servicios de Agenciamiento de carga Internacional.pdf'}>
+                        <Link p={4}  bg='brand.background' borderRadius={40} m={4} color='brand.primary' id="descargar" href={politica} download={'6. F 006 V.1 2020  Politica de tratamiento de datos.pdf'}>
                             Descargar Formato PDF
                         </Link>
                     </Flex>

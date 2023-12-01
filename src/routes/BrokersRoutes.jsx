@@ -15,7 +15,7 @@ export const BrokersRoutes = ({ isMobile }) =>{
             <Route path="/servicios" element={<Servicios isMobile={isMobile} />} />
             <Route path="/boletin" element={<ExchangeRates/>} />
             <Route path="/contacto" element={<Contacto isMobile={isMobile} />} />
-            <Route path="/terminos" element={<>terminos y condiciones</>} />
+            {/* <Route path="/terminos" element={<>terminos y condiciones</>} /> */}
             <Route path="/politica" element={<Politica />} />
             <Route path="/redirecciones" element={<Redireccionesejemplo/>} />
             {/* Ruta comodín para cualquier ruta no coincidente */}

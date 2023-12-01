@@ -22,22 +22,22 @@ export const Sedes = ({ number, child }) => {
                     borderRadius: 'full',
                     position: 'absolute',
                     top: '50%',
-                    left: '-10%',
+                    left: '-13%',
                     transform: 'translate(-50%, -50%)',
                     zIndex: '-1',
                 },
                 '&:hover': {
                     '&::after': {
                         transition: '1.5s',
-                        width: '290px',
-                        left: '30%',
+                        width: '260px',
+                        left: '40%',
                     },
                     color: '#fff',
                     '& > .text-hover': {
                         color: '#fff',
                     },
                 },
-                '@media (max-width: 1250px)': {
+                '@media (max-width: 1630px)': {
                     // Estilos específicos para pantallas con un ancho máximo de 600px
                     '&::after': {
                         left: '-13%',
@@ -49,7 +49,10 @@ export const Sedes = ({ number, child }) => {
                 '@media (min-width: 601px) and (max-width: 900px)': {
                     // Estilos específicos para pantallas con un ancho entre 601px y 900px
                     '&::after': {
-                        // left: '40%',
+                        left: '-13%',
+                    },
+                    '&:hover::after': {
+                        left: '40%',
                     },
                 },
             }}

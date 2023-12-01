@@ -1,6 +1,5 @@
 import { Box, Button, Center, Container, FormControl, FormLabel, Input, Textarea, Checkbox, Text, Link } from "@chakra-ui/react";
 import { useState } from "react";
-import { FormInput } from "../components/FormInput";
 import { ContactoMobile } from "../mobile/ContactoMobile";
 import { Link as RouterLink } from "react-router-dom";
 import { ContactoDesktop } from "../desktop/ContactoDesktop";
@@ -117,7 +116,7 @@ export const Contacto = ({ isMobile }) => {
                                 borderColor='brand.primary'
                                 required
                             >
-                                Acepto los <Link color='brand.primary' as={RouterLink} to="/">términos y condiciones</Link>
+                                Acepto los <Link color='brand.primary' as={RouterLink} to="/politica">términos y condiciones</Link>
                             </Checkbox>
                         </FormControl>
                         <Center width='100%'>

@@ -45,6 +45,8 @@ export const NosotrosDesktop = () => {
                      flex={{ base: "1", md: "0.5", lg: "0.25" }}
                      mx={2}
                      marginTop='20px'
+                     minW='285px'
+                     maxW='285px'
                   >
                      <Sedes number='01' child='Cartagena' />
                      <Sedes number='02' child='Barranquilla' />
@@ -59,6 +61,8 @@ export const NosotrosDesktop = () => {
                      flex={{ base: "1", md: "0.5", lg: "0.25" }}
                      mx={2}
                      marginTop='20px'
+                     minW='285px'
+                     maxW='285px'
                   >
                      <Sedes number='05' child='San Andrés' />
                      <Sedes number='06' child='Urabá' />

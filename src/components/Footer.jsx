@@ -7,6 +7,7 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import logoempresa from '../assets/img/logoempresa.png';
+import servicios from '../assets/documents/2. F 002 V.1 2020 Contrato de servicios de Agenciamiento de carga Internacional.pdf'
 
 export const Footer = () => (
     <footer>
@@ -46,8 +47,8 @@ export const Footer = () => (
                         <CustomLink as={Link} to={'/politica'}>
                             Politica tratamiento de datos
                         </CustomLink><br />
-                        <CustomLink as={Link} to={'/pservicios'}>
-                            Prestacion de servicios
+                        <CustomLink href={servicios} download={'6. F 006 V.1 2020  Politica de tratamiento de datos.pdf'}>
+                            Prestación de servicios
                         </CustomLink>
                     </Container>
 
