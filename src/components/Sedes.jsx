@@ -61,7 +61,7 @@ export const Sedes = ({ number, child }) => {
             <Text
                 className='text-hover'
                 color='black'
-                fontSize='25px'
+                fontSize='22px'
                 marginLeft='15px'
                 display='flex'
                 alignItems='center'

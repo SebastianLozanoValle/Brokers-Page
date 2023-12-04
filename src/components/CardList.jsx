@@ -13,7 +13,8 @@ export const CardList = ({ titulo, lista }) =>
             _hover={{
                 transform: 'scale(1.1)',
                 bg: 'brand.primary',
-                zIndex: '1'
+                zIndex: '1',
+                margin:'10px'
             }}
         >
             <CardBody>

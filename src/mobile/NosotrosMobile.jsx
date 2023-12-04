@@ -67,7 +67,7 @@ export const NosotrosMobile = () => {
                                 transition='transform 0.3s'
                                 _hover={{ transform: 'translate(5px, -5px)' }}
                             >
-                                Cartagena
+                               <b>Cartagena</b>
                             </Text>
                         </Box>
 
@@ -91,7 +91,7 @@ export const NosotrosMobile = () => {
                                 transition='transform 0.3s'
                                 _hover={{ transform: 'translate(5px, -5px)' }}
                             >
-                                Barranquilla
+                                <b>Barranquilla</b>
                             </Text>
                         </Box>
 
@@ -114,7 +114,7 @@ export const NosotrosMobile = () => {
                                 transition='transform 0.3s'
                                 _hover={{ transform: 'translate(5px, -5px)' }}
                             >
-                                Buenaventura
+                               <b>Buenaventura</b>
                             </Text>
                         </Box>
 
@@ -136,7 +136,7 @@ export const NosotrosMobile = () => {
                                 transition='transform 0.3s'
                                 _hover={{ transform: 'translate(5px, -5px)' }}
                             >
-                                Tumaco
+                                <b>Tumaco</b>
                             </Text>
                         </Box>
                     </Container>
@@ -165,7 +165,7 @@ export const NosotrosMobile = () => {
                                 transition='transform 0.3s'
                                 _hover={{ transform: 'translate(5px, -5px)' }}
                             >
-                                San andres
+                                <b>San andres</b>
                             </Text>
                         </Box>
 
@@ -189,7 +189,7 @@ export const NosotrosMobile = () => {
                                 transition='transform 0.3s'
                                 _hover={{ transform: 'translate(5px, -5px)' }}
                             >
-                                Uraba
+                               <b>Uraba</b>
                             </Text>
                         </Box>
 
@@ -212,7 +212,7 @@ export const NosotrosMobile = () => {
                                 transition='transform 0.3s'
                                 _hover={{ transform: 'translate(5px, -5px)' }}
                             >
-                                Santamarta
+                              <b>Santamart</b>
                             </Text>
                         </Box>
 
@@ -234,7 +234,7 @@ export const NosotrosMobile = () => {
                                 transition='transform 0.3s'
                                 _hover={{ transform: 'translate(5px, -5px)' }}
                             >
-                                Rioacha
+                                <b>Rioacha</b>
                             </Text>
                         </Box>
                     </Container>

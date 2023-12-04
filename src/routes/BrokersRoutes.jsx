@@ -13,7 +13,6 @@ export const BrokersRoutes = ({ isMobile }) =>{
             <Route path="/" element={<Inicio />} />
             <Route path="/nosotros" element={<Nosotros isMobile={isMobile}/>} />
             <Route path="/servicios" element={<Servicios isMobile={isMobile} />} />
-            <Route path="/boletin" element={<ExchangeRates/>} />
             <Route path="/contacto" element={<Contacto isMobile={isMobile} />} />
             {/* <Route path="/terminos" element={<>terminos y condiciones</>} /> */}
             <Route path="/politica" element={<Politica />} />

@@ -48,7 +48,6 @@ export const NavBar = ({ isMobile }) => {
                         <CustomNavLink to='/' children='Inicio' />
                         <CustomNavLink to='/nosotros' children='Nosotros' />
                         <CustomNavLink to='/servicios' children='Servicios' />
-                        <CustomNavLink to='/boletin' children='Boletín' />
                         <CustomNavLink to='/contacto' children='Contacto' />
                     </Flex>
                 )}
@@ -64,7 +63,6 @@ export const NavBar = ({ isMobile }) => {
                                 <CustomNavLink to="/" onClick={onClose} children="Inicio"/>
                                 <CustomNavLink to="/nosotros" onClick={onClose} children="Nosotros" />
                                 <CustomNavLink to="/servicios" onClick={onClose} children="Servicios" />
-                                <CustomNavLink to="/boletin" onClick={onClose} children="Boletín" />
                                 <CustomNavLink to="/contacto" onClick={onClose} children="Contacto" />
                                 <Box pt={10}
                                 display='flex'

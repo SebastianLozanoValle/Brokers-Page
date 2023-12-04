@@ -41,7 +41,6 @@ export const NosotrosDesktop = () => {
                      </Text>
                   </Box>
                   <Container
-                     borderLeft='7px solid #BF292E'
                      height='400px'
                      flex={{ base: "1", md: "0.5", lg: "0.25" }}
                      mx={2}
@@ -49,14 +48,13 @@ export const NosotrosDesktop = () => {
                      minW='285px'
                      maxW='285px'
                   >
-                     <Sedes number='01' child='Cartagena' />
-                     <Sedes number='02' child='Barranquilla' />
-                     <Sedes number='03' child='Buenaventura' />
-                     <Sedes number='04' child='Cartagena' />
+                     <b><Sedes number='01' child='Cartagena' /></b>
+                     <b><Sedes number='02' child='Barranquilla' /></b>
+                     <b><Sedes number='03' child='Buenaventura' /></b>
+                     <b><Sedes number='04' child='Cartagena' /></b>
                   </Container>
 
                   <Container
-                     borderLeft='7px solid #BF292E'
                      height='500px'
                      pt={12}
                      flex={{ base: "1", md: "0.5", lg: "0.25" }}
@@ -65,10 +63,10 @@ export const NosotrosDesktop = () => {
                      minW='285px'
                      maxW='285px'
                   >
-                     <Sedes number='05' child='San Andrés' />
-                     <Sedes number='06' child='Urabá' />
-                     <Sedes number='07' child='Santa Marta' />
-                     <Sedes number='08' child='Riohacha' />
+                     <b><Sedes number='05' child='San Andrés' /></b>
+                     <b><Sedes number='06' child='Urabá' /></b>
+                     <b><Sedes number='07' child='Santa Marta' /></b>
+                     <b><Sedes number='08' child='Riohacha' /></b>
                   </Container>
                </Container>
             </Center>
